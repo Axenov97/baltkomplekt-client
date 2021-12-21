@@ -1,0 +1,325 @@
+.header-body{
+	z-index: 5;
+	padding: 1% 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+	.flex-container{
+		margin: 0 auto;
+		
+		width: 100%;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.header__burger{display: none;}	
+
+	.header__brand{
+		width: calc(40%/5);
+		.link{
+			img{
+				width: 100%;
+			}
+		}
+	}
+	
+	.header__navigation{
+		flex: 30% 0 1;	
+		.navigation{
+			.menu{
+				display: flex;
+				justify-content: flex-start;
+				li{
+					padding: 2%;
+					border-radius: 0;
+					border-bottom: 1px solid transparent;
+					&:hover{
+						>a, p{
+							border-bottom: 1px solid $blue;
+							color: $blue;
+							text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+						}
+					}
+
+					a, p{
+						transition: all .5s ease-in-out;
+						cursor: pointer;
+						@include adaptiv-font(14, 10);
+						line-height: 24px;
+						color: $dark;
+						text-transform: uppercase;
+						&.active{
+							color: $blue;
+							text-shadow: 0 0 1px #333, 0 0 .65px #333;
+						}
+					}
+				}
+			}	
+		}	
+	}
+
+	.header__numbers{
+		display: flex;
+		flex: 30% 0 1;
+		justify-content: flex-end;
+		>p{
+			@include adaptiv-font(12, 10);
+			line-height: 20px;
+			color: $gray;
+			text-transform: uppercase;
+			margin: 0 2%;
+			a{
+				color: $blue;
+				@include adaptiv-font(14, 11);
+				font-weight: 500;
+				&:hover{
+					color: $red;
+				}
+			}
+		}
+	}
+		
+	.header__btn{
+		button{
+			width: auto;
+			height: auto;
+			padding: 12px 16px;
+			font-weight: 500;
+			font-size:1.4em;
+			line-height: 20px;
+			text-transform: uppercase;
+			color: $blue;
+			border: 1px solid $blue;
+			border-radius: 4px;
+			background: rgba(0, 64, 128, 0.05);
+			transition: all .3s ease-in-out !important; 
+			&:hover{
+				transform: translate(2.5px, -2.5px);
+				box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.15)!important;
+			} 
+		}	
+	}
+
+	.header__lang{
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+		font-weight: 500;
+		font-size: 1.4em;
+		line-height: 16px;
+		text-transform: uppercase;
+		color: #A8A8A8;
+		text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+		cursor: pointer;
+		.lang-active{
+			color: $darkblue;
+		}
+	}
+}
+// submenu /////////////////////////////////////////////////////////////////
+			
+@media(min-width: 901px){
+	.submenu {
+		position: absolute;
+		z-index: 5;
+		width: 300px;
+	 	height: auto;
+	 	background: #FFFFFF;
+		box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+		border-radius: 2px 20px 20px 20px;
+		visibility: hidden;
+		opacity: 0;  
+		transform: translateY(10px);
+		transition: all .5s ease-in-out;
+
+		li {
+			position: relative;
+			padding: 16px;
+			margin: 8px;
+			&:hover{
+				background-color: $blue;
+				border-radius: 4px !important;
+				transition: none !important;
+				>a, p{
+					transition: none !important;
+					border-bottom: none !important;
+					color: $white !important;
+				}
+			}
+		}
+		a, p {
+			@include adaptiv-font(14, 11);
+			line-height: 24px;
+			text-transform: uppercase;
+			color: #161F26;
+			text-align: left;
+			&.active{
+				color: $blue;
+				text-shadow: 0 0 1px #333, 0 0 .65px #333;
+			}
+		}
+	}
+	nav li:hover > .submenu {
+	  visibility: visible;
+	  opacity: 1;
+	  transform: translateY(0px);
+	}
+}
+// responsive/////////////////////////////////////////////////////////////////
+
+.numbers-responsive, .header__bg, .header__lang_mobile{display: none;}
+
+@media(max-width: 900px){	
+	.sub__link:after{
+		content: url(../img/linkArrow.svg);
+  		color: inherit;
+  		margin-left: 10px;
+  		display: inline-block;
+  		transition: .3s ease-in-out;
+	}
+	.sub__link.open:after{
+		transform:rotate(90deg);
+	}
+	.submenu{
+		transition: .3s ease-in-out;
+		position: relative;
+	    z-index: 5;
+	    height: 0;
+	    width: 100%;
+	    padding-left: 5%;
+	    background: transparent;
+	    box-shadow: none;
+	    visibility: hidden;
+	    opacity: 0;
+	    transform: translateX(-100vw);
+	    &.open{
+	    	transform: translateY(0);
+	    	height: 100%;
+	    	visibility: visible;
+	    	opacity: 1;
+	    }
+	}
+	.header__lang{display: none !important;}
+	// .header__lang_link{display: none;}
+	// .header__lang_mobile{display: block;}
+	.header__bg{display: block;}
+	.numbers-responsive{
+		display: flex;
+		justify-content: space-around;
+		margin-top: 80px;
+
+		>p{
+			line-height: 20px;
+			color: $gray;
+			text-transform: uppercase;
+
+			a{
+				color: $red;
+				 font-size: 1.4em;
+				font-weight: 500;
+			}
+		}
+	}
+	header{
+		padding: 6%;
+	}
+	.header-body{
+		padding: 3% 0;
+		.flex-container{
+			justify-content: space-between;
+			padding: 0 16px !important;
+			margin:0 !important;
+		}
+		.header__burger, .header__brand, .header__lang {
+			z-index: 3;
+		}
+		
+		.header__brand{
+			width: calc(50%/2) !important;
+		}
+
+		.header__bg{
+			left: 0;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			background: $white;
+			box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.1);
+		}
+		.header__numbers, .header__btn{
+			display: none;
+		}
+		.header__lang{font-size: 1.8em!important;}
+		
+		.header__navigation{
+			display: block;
+			position: absolute;
+			top: 0;
+			left:0;
+			width: 100%;
+			height: 100vh;
+			background: $blue;
+			z-index: 1;
+			transform: translateX(-100vw);
+			&.active{
+				transform: translateY(0);
+			}
+
+			.navigation{
+				.menu{
+					flex-direction: column;
+					margin-top: 20%;
+					li{
+						a, p{
+							color: $white !important;
+							font-size: 1.8em!important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 1024px) and (min-width: 900.01px){
+	.header-body{
+		.header__brand{
+			width: calc(60%/5) !important;
+		}
+
+		.header__numbers{
+			flex: 30% 0 1 !important;
+		}
+	}
+}
+
+@media(max-width: 1400px) and (min-width: 1024.1px){
+	.header-body{
+		.header__brand{
+			width: calc(60%/5) !important;
+
+		}
+
+		.header__navigation, .header__numbers{
+			flex: 28% 0 1 !important;
+		}
+	}
+}
+@media(max-width: 1024px){
+	.header-body{
+		.flex-container{
+			padding: 0 1%
+		}
+	}
+	.header__brand{
+		.link{
+			img{
+				width: 80%;
+			}
+		}
+	}
+}

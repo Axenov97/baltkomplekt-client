@@ -1,0 +1,278 @@
+.download__mobile{
+	display: none;
+	width: 100%;
+	a{
+		@extend %btn;
+		background: rgba(21, 102, 165, 0.05);
+		border-radius: 12px;
+		@include adaptiv-font(12, 10);
+		сolor:$dark;
+		display: inline-block;
+		width: 100%;
+		height: auto;
+		text-align: center;
+		padding: 4%;
+		text-transform: uppercase;
+		img, p{
+			display: inline-block;
+		}
+	}
+}
+footer{
+	margin-top: 10%;
+}
+
+.footer__content{
+	.footer__content_top{
+		justify-content: space-between;	
+		.blue__head{text-align: left;}
+		.footer_download{
+			flex: 70% 1 1;
+			text-align: right;
+			a{
+				text-transform: uppercase;
+				@extend %btn;
+				background: rgba(21, 102, 165, 0.05);
+				border-radius: 12px;
+				@include adaptiv-font(12, 10);
+				display: inline-block;
+				width: 100%;
+				height: auto;
+				text-align: center;
+				padding: 2%;
+				&:nth-child(1) {
+					width: 22%;
+				}
+				&:nth-child(2) {
+					width: 35%;
+				}
+				img, p{
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.grid-container{
+		display: grid;
+		grid-template-columns: 40% 60%;  
+		grid-template-rows: auto; 
+		.contacts{
+			margin-right: 2%;
+			margin-top: 4%;
+			@include block-style;
+			padding:2%;
+
+			&.contacts_spb{
+				grid-column: 1; 
+				grid-row: 1;
+			}  
+	    	&.contacts_moscow {
+				grid-column: 1; 
+				grid-row: 2;
+	    	}
+        	&.contacts_novoros{
+				grid-column: 1; 
+				grid-row: 3;
+        	}
+			h4{
+				font-style: normal;
+				font-weight: 500;
+				@include adaptiv-font(24, 14);
+				line-height: 24px;
+				letter-spacing: 0.02em;
+			}
+			a{
+				color: $dark;
+			}
+		}
+
+		.map{
+    		grid-area: 1 / 2 / 3 / 2;
+			@include block-style;
+			padding:2%;
+			iframe{
+				border-radius: 20px;
+			}
+		}
+
+		.footer__callback{
+			grid-area: 3 / 2 / 3 / 2;
+			align-items: flex-start;
+			justify-content: space-between;
+			@include block-style;
+			padding:2%;
+			margin-top: 1%;
+			.footer__callback_name{
+				flex: 45% 1 1;
+			}
+			form{
+				flex: 55% 1 1;
+			}
+
+			h4{
+				font-style: normal;
+				font-weight: 500;
+				@include adaptiv-font(24, 14);
+				line-height: 24px;
+				letter-spacing: 0.02em;
+			}
+			a{
+				color: $dark;
+				font-size: 16px;
+				line-height: 24px;
+				letter-spacing: 0.02em;
+			}
+			input{
+				font-style: normal;
+				font-weight: normal;
+				@include adaptiv-font(18, 12);			
+				line-height: 22px;
+				color: $gray;
+				width: 50%;
+				height: 60px;
+				border: 1px solid #B2BBB9;
+				box-sizing: border-box;
+				border-radius: 4px;
+			}
+			button{
+				@extend %btn;
+				width: 45%;
+				color: $white;
+				background-color: $blue;
+			}
+		}
+
+		.map, .footer__callback{
+			margin-left: 2%;
+			margin-top: 4%;
+		}
+	}	
+}
+
+
+.footer__white{
+	.flex-container{
+		justify-content: space-around;
+		align-items: center;
+		height: 120px;
+		filter: drop-shadow(0px -20px 40px rgba(0, 0, 0, 0.05));
+		background: #FFFFFF;
+		margin-top: 3%;
+		.footer__white_elem{
+			&:first-child{
+				flex: 0 0 49%;
+			}
+		}
+	}
+}
+
+// responsive/////////////////////////////////////////////////////////////////
+
+@media(max-width: 900px){	
+	.footer__content{
+		margin: 16px;
+		.download__mobile{
+			display: block;
+		}
+		.footer__content_top{
+			display: block;
+			.footer_download{
+				display: none;
+			}
+		}
+		
+		.grid-container{
+			@include block-style;
+			grid-template-columns: 100%;  
+			.contacts{
+				margin: 0;
+				box-shadow: none;
+				background:transparent;
+				border-radius:0;
+				padding:16px;
+				
+				&.contacts_spb{
+					grid-area: 1 / 1 / 1 / 1;
+				}  
+		    	&.contacts_moscow {
+					grid-area: 3 / 1 / 3 / 1;
+		    	}
+	        	&.contacts_novoros{
+					grid-area: 4 / 1 / 4 / 1;
+	        	}
+			}
+			.map{
+				margin: 0;
+				box-shadow: none;
+				background:transparent;
+				border-radius:0;
+				padding: 0;
+				grid-area: 2 / 1 / 2 / 1;
+				
+				iframe{
+					border-radius:0;
+				}
+			}
+			.footer__callback{
+				margin: 0;
+				box-shadow: none;
+				background:transparent;
+				border-radius:0;
+				padding:16px 16px 24px 16px;
+				grid-area: 5 / 1 / 5 / 1;
+				.footer__callback_name{
+					display: none;
+				}
+				input{
+					width: 100%;
+					height: 50px;
+				}
+				button{
+					width: 100%;
+					height: 50px;
+				}
+			}	
+		}
+	}
+
+	.footer__white{
+		.flex-container{
+			justify-content: flex-start;
+			align-items: center;
+			height: auto!important;
+			flex-direction: column;
+			filter:none;
+
+		}
+		.footer__white_elem{
+			padding: 2%;
+			&:nth-child(1) {
+				order: 4;
+			}
+		}
+	}
+}
+
+@media(max-width: 1400px) and (min-width: 900.1px){	
+	.footer__content{
+		.footer__callback{
+			input{
+				width: 29%;
+			}
+			button{
+				width: 20%;
+			}
+		}	
+	}
+	.footer__white{
+		.flex-container{
+			height: 120px;
+			.footer__white_elem{
+				&:first-child{
+					flex: 0 0 auto;
+				}
+			}
+		}
+	}
+}

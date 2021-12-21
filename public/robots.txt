@@ -1,0 +1,15 @@
+User-agent: Yandex
+Allow: /*.js
+Allow: /*.css
+Disallow: /admin/
+Host: baltkomplekt.ru
+
+User-agent: Googlebot
+Allow: /*.js
+Allow: /*.css
+Disallow: /admin/
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login
+Sitemap: https://www.baltkomplekt.ru/sitemap.xml

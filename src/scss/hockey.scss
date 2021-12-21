@@ -1,0 +1,80 @@
+.hockey{
+	padding: 0;
+	h2{
+		padding: 0 1%;
+	}
+}
+
+.hockey__bg{
+	background: url(../img/hockey_bg.webp) center 0/100% no-repeat;
+	padding: 10% 0;
+	.flex-container	{
+		justify-content: center;
+		.hockey__content{
+			background-color: rgba(22, 31, 38, 0.8);;
+
+			width: 50%;
+			padding: 5%;
+			align-self: center;
+
+			h3{
+				font-style: normal;
+				font-weight: bold;
+				@include adaptiv-font(24, 14);
+				line-height: 29px;
+				color: $white;
+			}
+			p{
+				width: 80%;
+				margin-top: 2%;
+				font-style: normal;
+				font-weight: normal;
+				@include adaptiv-font(14, 11);
+				line-height: 17px;
+				color: $white;
+			}
+			.btn{
+				margin-top: 2%;
+				@extend %btn;
+			}
+			.btn__red{
+				width: 30%;
+
+				background: $red;
+				color: $white;
+			}
+			.btn__white{
+				width: 60%;
+				background: $white;
+				color: $darkblue;
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.hockey{
+		h2{letter-spacing: 0!important;}
+	}
+}
+
+@media (max-width: 1200px) {
+	.hockey__content{
+		width: 80%!important;
+	}
+}
+
+@media (max-width: 1024px) {
+	.hockey{
+		padding: 0!important;
+	}
+	.hockey__bg{
+		background-size: cover!important;
+	}
+	.hockey__content{
+		width: 80%!important;
+		.btn{
+			width: 100%!important;
+		}
+	}
+}

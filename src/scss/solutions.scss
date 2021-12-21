@@ -1,0 +1,118 @@
+.department__section{
+	.container{
+		text-align: center;
+		.department__content{
+			justify-content: space-around;
+			.department__content_left, .department__content_right{
+				flex: 35% 0 0;
+				text-align: center;
+				span{
+					font-weight: bold;
+					@include adaptiv-font(120, 80);
+					letter-spacing: 0.02em;
+					color: $blue;
+				}
+				p{
+					font-weight: normal;
+					@include adaptiv-font(16, 11);
+					line-height: 24px;
+					letter-spacing: 0.02em;
+					color: $dark;
+				}
+			}
+		}	
+	}
+}
+
+.solution__section{
+	.container{
+		p{
+			margin-top: 2%;
+		}
+		h2{
+			margin-bottom: 1%;
+		}
+		.solution__first, .solution__second, .solution__three{
+			margin-top: 2%;
+			justify-content: space-between;
+			@include block-style;
+			padding: 2%;
+			.solution__first_left{
+				flex: 70% 0 0;
+				button{
+					margin-top: 5%;
+				}
+				.gray-text{
+					opacity: 0.5;
+					margin-top: 2%;
+				}
+			}
+			.solution__first_right{
+				flex: 25% 0 0;
+				text-align: center;
+				.top-block, .bottom-block{
+					p{
+						@include adaptiv-font(14, 10);
+						line-height: 16px;
+					}
+					a{
+						margin: 2% auto;
+						width: 80%;
+						height: auto;
+						display: block;
+						padding: 5%;
+					}
+				}
+				.bottom-block{
+					margin-top: 5%;
+				}
+			}
+		}
+		.solution__second, .solution__three{
+			ul{
+				li{
+					font-style: normal;
+					@include adaptiv-font(14, 11);
+					line-height: 24px;
+					list-style-type: disc;
+					list-style-position: inside;
+				}
+			}
+			button{
+				text-align: right;
+			}
+		}
+	}
+}
+
+
+@media(max-width: 768px){	
+	.department__content_left, .department__content_right{
+		flex: 50% 0 0 !important;
+		p{
+			line-height: 16px !important;
+		}
+	}
+	.solution__section{
+		.container{
+			.solution__first{
+				flex-wrap: wrap;
+				.solution__first_right, .solution__first_left{
+					flex: 100% 0 0;
+					button, .btn{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 400px){	
+	.department__content{
+		flex-wrap: wrap;
+		.department__content_left, .department__content_right{
+			flex: 100% 0 0 !important;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.clients{
+	.container{
+		position: relative;
+		h2{
+			text-align: center;
+			padding-top: 40px;
+		}
+	}
+	.clients__swiper{
+		margin-top: 3%;
+		padding: 5%;
+		height: auto;
+		@include block-style;
+		.swiper-wrapper{
+			align-items: center;
+			.client{
+				text-align: center;
+				img{
+					margin: 0 auto;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.clients .clients__swiper .client img {
+    	//width: 65%;
+    	//height: 100px;
+	}
+	.clients .container h2{
+		padding-top: 2%;
+		margin-bottom: 0;
+	}
+}

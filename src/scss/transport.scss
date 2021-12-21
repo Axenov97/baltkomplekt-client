@@ -1,0 +1,36 @@
+.transport{
+	.container{
+		@include block-style;
+		max-width: 1400px;
+	    margin: 1% auto;
+		padding: 2%;
+		ul{
+			li{
+				font-weight: 500;
+				@include adaptiv-font(16, 12);
+				line-height: 32px;
+				color: $dark;
+				list-style-type: disc;
+				list-style-position: inside;
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.transport{
+		.container{
+			ul{
+				padding: 2%;
+				li{
+					font-weight: 300;
+					line-height: 20px;
+				}
+			}
+			button{
+				width: 100%;
+			}
+		}
+	}	
+}
+

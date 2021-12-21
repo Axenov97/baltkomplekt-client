@@ -1,0 +1,59 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{THE_REQUEST} "^GET ([^?]*?)(/index)?\.html"
+RewriteRule ^ %1 [R=301,L]
+
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^.]+)$ /$1.html [L]
+
+# ЧПУ
+	RewriteRule ^services/tamojennoe-oformlenie services/custom-clearance [R=301,L]
+	RewriteRule ^services/perevozka-opasnykh-gruzov services/custom-clearance [R=301,L]
+	RewriteRule ^services/avtoperevozki services/transport-services [R=301,L]
+	RewriteRule ^services/morskie-perevozki services/transport-services [R=301,L]
+	RewriteRule ^services/tamozhennyie-sboryi services/custom-clearance [R=301,L]
+	RewriteRule ^services/kalkulyator-tamozhennyix-poshlin services/custom-clearance [R=301,L]
+	RewriteRule ^services/ekspedirovanie-gruzov services/transport-services [R=301,L]
+	RewriteRule ^services/mejdunarodnie-avtoperevozki-gruzov services/transport-services [R=301,L]
+	RewriteRule ^services/aviaperevozki services/transport-services [R=301,L]
+	RewriteRule ^services/perevozki-negabaritnyh-gruzov/rossiya services/transport-services [R=301,L]
+	RewriteRule ^services/logistica services/transport-services [R=301,L]
+	RewriteRule ^contact / [R=301,L]
+	RewriteRule ^help/mezhdunarodnaja-perevozka-gruzov services/transport-services [R=301,L]
+	RewriteRule ^help/tamozhennyie-sboryi services/custom-clearance [R=301,L]
+	RewriteRule ^help/tamozhennoe-deklarirovanie-tovarov-i-gruzov services/custom-clearance [R=301,L]
+	RewriteRule ^help/osobennosti-morskih-gruzoperevozok services/custom-clearance [R=301,L]
+	RewriteRule ^help/kak-oformit-import-tovarov services/custom-clearance [R=301,L]
+	RewriteRule ^help/tamozhennaja-deklaracija services/custom-clearance [R=301,L]
+	RewriteRule ^help/tonkosti-tamozhennogo-oformlenija services/custom-clearance [R=301,L]
+	RewriteRule ^help/tamozhennyie-sboryi services/custom-clearance [R=301,L]
+	RewriteRule ^help/avtoperevozki-stepen-vajnosti services/transport-services [R=301,L]
+
+	RewriteRule ^tamozhennoye_oformleniye_gruzov_i_tovarov/alkogol-i-sigarety services/custom-clearance [R=301,L]
+	RewriteRule ^news / [R=301,L]
+
+	RewriteRule ^tamozhennoye_oformleniye_gruzov_i_tovarov/oruzhie services/custom-clearance [R=301,L]
+	RewriteRule ^social_projects/161 services/transport-services [R=301,L]
+
+	RewriteRule ^gruzovye-perevozki/rossiya-ispaniya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-armeniya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-latviya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-kipr services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-yaponiya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-angliya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-braziliya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-daniya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-franciya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-greciya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-iraq services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-irlandiya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-italiya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-litva services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-livan services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-shveciya services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-estoniya services/custom-clearance [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-polsha services/transport-services [R=301,L]
+	RewriteRule ^gruzovye-perevozki/rossiya-iran services/transport-services [R=301,L]
+	RewriteRule ^mailto:logist1@virazh-logistika.com mailto:logist@baltkomplekt.ru [R=301,L]
+	RewriteRule ^mailto:port1@virazh-logistika.com mailto:logist@baltkomplekt.ru [R=301,L]

@@ -1,0 +1,13 @@
+.change-pass__group{
+  display: flex;
+  flex-direction: column;
+  p{
+    color: #D22538;
+  }
+  .pass-input{
+
+    &.error-input{
+      border-color: #D22538 !important;
+    }
+  }
+}

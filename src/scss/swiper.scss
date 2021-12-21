@@ -1,0 +1,50 @@
+.clients, .stuff__section{
+  .container{
+    .swiper{
+      width: 85%;
+    }
+    .swiper-dots{
+      margin-top: 2%;
+      text-align: center;
+      .swiper-pagination-bullet-active{
+        background-color: #161f26;
+      }
+    }
+    button{
+      position: absolute;
+      top: 60%;
+      background-color: transparent;
+
+      &.swiper-prev {
+        left: 30px;
+        &:before{content: url(../img/prev.svg);}
+      }
+      &.swiper-next {
+        right: 30px;
+        &:before{content: url(../img/next.svg);}
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .clients, .stuff__section{
+    .container {
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .swiper-dots li{
+    width: 15px;
+  }
+}
+@media (max-width: 350px) {
+  .swiper-dots li{
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+  }
+}

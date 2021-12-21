@@ -1,0 +1,51 @@
+.advantages{
+	text-align: center;
+	.advantages__bg{
+		background-color: $white;
+		width: 100%;
+		padding: 2%;
+		max-width: 1400px;
+    	margin: 0px auto;
+    	@include block-style;
+		.container{
+			.flex-container{
+				justify-content: space-around;
+				text-align: center;	
+				flex-wrap: wrap;
+				.advantages__elem{
+					flex: 20% 0 0;
+					.advanteges__elem_text{	
+						h5{
+							font-weight: 600;
+							@include adaptiv-font(20, 14);
+							line-height: 16px;
+							color: $dark;
+							padding-top: 32px; 
+							height: 70px;
+						}
+						p{
+							padding-top: 32px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.advantages__elem{
+		margin-top: 16px;
+		flex: 100% 0 0 !important;
+	}
+	.advanteges__elem_text{	
+		h5{
+			padding-top: 8px !important; 
+			height: auto !important;
+		}
+		p{
+			padding-top: 8px !important;
+			line-height: 12px !important;
+		}
+	}
+}

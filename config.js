@@ -1,0 +1,1 @@
+export const API_URL = 'http://root@vm671464.vps.masterhost.tech:5000/'

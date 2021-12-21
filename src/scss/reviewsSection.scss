@@ -1,0 +1,65 @@
+.reviews__container	{
+	padding: 0;
+	@include block-style;
+
+	.review__header{
+		border-radius: 20px 20px 0 0;
+		background-color: $blue;
+		h2{
+			padding: 1%;
+			color: $white;
+		}
+	}
+	#wpac-review{
+		padding: 0 1%;
+		.wpac{
+			font-family: Montserrat!important;	
+			font-weight: normal!important;
+			.wp-btn{
+				@extend %btn;
+				font-style: normal!important;
+				font-weight: 600!important;
+				@include adaptiv-font(14, 11);
+				line-height: 20px!important;
+				text-transform: uppercase;
+				border-radius: 6px!important;
+				background: $blue!important;
+				color: $white!important;
+				padding: 4%!important;
+				svg{display: none;}
+			}
+		}
+	}
+}
+
+//responsive///////////////////////////////////////////////////////////////////
+
+@media (max-width: 1024px) {
+	#wpac-review {
+		.wp-rating {
+			width: 50%!important;
+		}		
+		.wp-addbtn {
+			width: 50%!important;
+			
+			.wp-btn{
+				
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	#wpac-review {
+		.wp-rating {
+			width: 100%!important;
+		}		
+		.wp-addbtn {
+			width: 100%!important;
+			
+			.wp-btn{
+				width: 100%!important;
+			}
+		}
+	}
+}
