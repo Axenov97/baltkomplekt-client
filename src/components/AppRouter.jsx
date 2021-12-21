@@ -30,11 +30,11 @@ const AppRouter = () => {
     const {user} = useContext(Context)
     const [blogPage, setBlogPage] = useState('Блог')
     const location = useLocation();
+
     useEffect(() => {
-        // runs on location, i.e. route, change
-        console.log('handle route change here', location)
         window.ym(86927848, 'hit', location.pathname)
     }, [location])
+
     return <>
         <Routes>
             { user.isAuth && <Route  key='admin' path='admin/' element={ <Admin/> }>
