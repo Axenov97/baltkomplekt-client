@@ -1,14 +1,15 @@
 import {Outlet} from "react-router-dom";
-import {animated, useTransition} from "react-spring";
 import React, {useEffect} from 'react'
 import {getBlogContent} from "../data";
 import {BlogLinkGroup} from "../components/blogComponents/BlogLinkGroup";
 import {Header} from "../components/Header";
 import {Helmet} from "react-helmet";
 import {observer} from "mobx-react-lite";
+// import {animated, useTransition} from "react-spring";
+
 
 const Blog = observer( (props) => {
-    const { location, blogPage, setBlogPage } = props
+    const { location } = props
 
     const blogContent = getBlogContent().find(item => item.path === location.pathname);
     // const transition = useTransition(location, (location)=> location.pathname, {
@@ -27,7 +28,6 @@ const Blog = observer( (props) => {
     // })
 
     useEffect(() => {
-        setBlogPage('Блог')
         const body = document.querySelector('#root');
         body.scrollIntoView({behavior: 'smooth'}, 500);
     }, []);
@@ -43,7 +43,7 @@ const Blog = observer( (props) => {
             ]}
         />
         <Header />
-        <BlogLinkGroup blogPage={blogPage}/>
+        <BlogLinkGroup blogPage={blogContent.title}/>
         <div className="container blog-container">
             <p style={{marginBottom: '2%', letterSpacing: '0.02em', color: '#3B4853'}}>
                 {blogContent.description}

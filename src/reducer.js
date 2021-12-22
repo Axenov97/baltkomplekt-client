@@ -18,6 +18,12 @@ export function reducer(state, {type, payload}) {
                 paddingBody: document.body.style.paddingRight = "0px"
             }
 
+        case 'SET_FORM_CONTENT':
+            return {
+                ...state,
+                content: payload.content
+            }
+
         default:
             return state;
     }

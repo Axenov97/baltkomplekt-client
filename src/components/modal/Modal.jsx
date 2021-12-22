@@ -7,6 +7,7 @@ import {AddNewsForm} from "./adminModals/AddNewsForm";
 function Modal() {
     const { closeModal, modalActive, form } = useContext(ModalContext)
 
+
     return <div className={modalActive ? 'modal-overlay active' : 'modal-overlay'} >
         <div className={modalActive ? 'modal active' : 'modal'} id={form} >
             <span className="close-modal" onClick={()=>closeModal(form)} />

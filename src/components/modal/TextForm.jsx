@@ -1,9 +1,9 @@
 import bg from "../../img/modal/modalText/bg.svg"
 import {ModalContext} from "../../context";
-import {useContext} from 'react'
+import {useContext, useState} from 'react'
 
 function TextForm() {
-    const {form} = useContext(ModalContext)
+   const {form, content, setFormContent} = useContext(ModalContext)
 
     return <div className={form === 'modal-text' ? "modal-content modal-text active" : "modal-content modal-text"}>
         <h3>Оставьте заявку на расчет полной <br/> комплексной стоимости</h3>
@@ -14,15 +14,46 @@ function TextForm() {
             <div className="form-start__content">
                 <div className="form-group">
                     <span className="preText">Имя</span>
-                    <input required type="text" className="form-control-start" name="Имя" placeholder="Василий" />
+                    <input
+                        required
+                        type="text"
+                        className="form-control-start"
+                        name="Имя"
+                        placeholder="Василий"
+                        value={content.name}
+                        onChange={e => setFormContent({...content, name: e.target.value})}
+                    />
                     <span className="preText">Почта</span>
-                    <input required type="text" className="form-control-start" name="Почта" placeholder="Ваш почтовый адрес" />
+                    <input
+                        required
+                        type="text"
+                        className="form-control-start"
+                        name="Почта"
+                        placeholder="Ваш почтовый адрес"
+                        value={content.email}
+                        onChange={e => setFormContent({...content, email: e.target.value})}
+                    />
                     <span className="preText">Телефон</span>
-                    <input required type="tel" data-tel-input className="form-control-start"
-                           name="Телефон" placeholder="+7 (XXX) xxx xx-xx" maxLength="18" />
+                    <input
+                        required
+                        type="tel"
+
+                        className="form-control-start"
+                        name="Телефон"
+                        placeholder="+7 (XXX) xxx xx-xx"
+                        value={content.phone}
+                        onChange={e => setFormContent({...content, phone: e.target.value})}
+                    />
                     <span className="preText">Ваш запрос</span>
-                    <textarea required type="text" className="form-control-start" name="Сообщение"
-                              placeholder="Пожалуйста, подробно опишите ваш запрос" />
+                    <textarea
+                        required
+                        type="text"
+                        className="form-control-start"
+                        name="Сообщение"
+                        placeholder="Пожалуйста, подробно опишите ваш запрос"
+                        value={content.text}
+                        onChange={e => setFormContent({...content, text: e.target.value})}
+                    />
                 </div>
             </div>
             <button type="submit" className="btn modal-btn">Оставить заявку</button>

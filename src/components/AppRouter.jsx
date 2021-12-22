@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Routes, Route, useLocation} from "react-router-dom";
 import {Layout} from "./Layout";
 import {Home} from "../pages/Home";
@@ -28,7 +28,6 @@ import CasesAdmin from "../pages/Administration/CasesAdmin/CasesAdmin";
 
 const AppRouter = () => {
     const {user} = useContext(Context)
-    const [blogPage, setBlogPage] = useState('Блог')
     const location = useLocation();
 
     useEffect(() => {
@@ -55,12 +54,12 @@ const AppRouter = () => {
                 <Route path='services/solutions' element={<Solutions/>} />
             </Route>
 
-            <Route path='blog/' element={<Blog location={location} blogPage={blogPage} setBlogPage={setBlogPage}/>} >
+            <Route path='blog/' element={<Blog location={location}/>} >
                 <Route index element={<BlogSection />} />
-                <Route path='materials' element={ <Materials setBlogPage={setBlogPage} /> }/>
-                <Route path='cases' element={ <Cases setBlogPage={setBlogPage}/> }/>
-                <Route path='FAQ' element={<FAQ setBlogPage={setBlogPage}/>}/>
-                <Route path='news' element={<News setBlogPage={setBlogPage}/>}/>
+                <Route path='materials' element={ <Materials location={location} /> }/>
+                <Route path='cases' element={ <Cases location={location} /> }/>
+                <Route path='FAQ' element={<FAQ location={location} />}/>
+                <Route path='news' element={<News location={location} />}/>
             </Route>
 
             <Route path='contacts' element={<Contacts />} />
