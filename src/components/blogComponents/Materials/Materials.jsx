@@ -23,6 +23,7 @@ const Materials = observer(() => {
                  </Box>
              )
          }
+
     return <>
         <Helmet
             title="Справочные материалы | Балткомплект "

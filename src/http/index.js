@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const $host = axios.create({
-    baseURL: process.env.REACT_APP_API_URL
+    baseURL: 'https://vm671464.vps.masterhost.tech:8080/'
 })
 
 const $authHost = axios.create({
-    baseURL: process.env.REACT_APP_API_URL
+    baseURL: 'https://vm671464.vps.masterhost.tech:8080/'
 })
 
 const authInterceptor = config => {
