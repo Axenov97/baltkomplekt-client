@@ -8,7 +8,7 @@ function TextForm() {
 
     const handleSend = async (e) => {
         try {
-            // await sendMail(content.text)
+            await sendMail(content.text)
 
         } catch (error) {
             console.error(error)
