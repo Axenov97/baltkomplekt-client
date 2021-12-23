@@ -214,7 +214,7 @@ function PriceSection(){
                         </button>
                         <a href={price} target="_blank" rel="noreferrer" className="btn__left">Скачать прайс</a>
                         <div className="btn__right">
-                            <button id="_modal-calculate" className="btn">Рассчитать перевозку</button>
+                            <button id="_modal-calculate" className="btn" onClick={()=>openModal('modal-text')}>Рассчитать перевозку</button>
                             <button id="_modal-text" className="btn" onClick={()=>openModal('modal-text')}>Оставить заявку</button>
                         </div>
                     </div>

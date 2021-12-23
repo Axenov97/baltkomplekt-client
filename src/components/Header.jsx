@@ -74,7 +74,7 @@ function Header() {
                                 id="_modal-callback"
                                 className="header__btn_call js-btn-open"
                                 onClick={() => {
-                                    openModal('modal-text')
+                                    openModal('modal-callback')
                                     sendYandexMetrik('reachGoal','ButtonCallback')
                                 }}
                             >

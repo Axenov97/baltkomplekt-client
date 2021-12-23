@@ -1,9 +1,19 @@
 import bg from "../../img/modal/modalText/bg.svg"
 import {ModalContext} from "../../context";
 import {useContext, useState} from 'react'
+import {sendMail} from "../../http/SendMailAPI";
 
 function TextForm() {
-   const {form, content, setFormContent} = useContext(ModalContext)
+    const {form, content, setFormContent} = useContext(ModalContext)
+
+    const handleSend = async (e) => {
+        try {
+            // await sendMail(content.text)
+
+        } catch (error) {
+            console.error(error)
+        }
+    }
 
     return <div className={form === 'modal-text' ? "modal-content modal-text active" : "modal-content modal-text"}>
         <h3>Оставьте заявку на расчет полной <br/> комплексной стоимости</h3>
@@ -37,7 +47,7 @@ function TextForm() {
                     <input
                         required
                         type="tel"
-
+                        // data-tel-unput
                         className="form-control-start"
                         name="Телефон"
                         placeholder="+7 (XXX) xxx xx-xx"
@@ -56,7 +66,13 @@ function TextForm() {
                     />
                 </div>
             </div>
-            <button type="submit" className="btn modal-btn">Оставить заявку</button>
+            <button
+                type="submit"
+                className="btn modal-btn"
+                onClick={handleSend}
+            >
+                Оставить заявку
+            </button>
             <div className="btn__after_text">
                 <span>Нажимая нопку “Оставить заявку”, вы соглашаетесь<br/> с политикой конфиденциальности</span>
             </div>

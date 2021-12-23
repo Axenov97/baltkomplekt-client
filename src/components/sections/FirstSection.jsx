@@ -17,11 +17,15 @@ function FirstSection(){
                             <img src={cubsImage} className="img-coubs" alt='балткомплект'/>
                             {startContent.title}
                             {startContent.description}
-                            <button id="_modal-calculate" className="btn btn__red">Рассчитать перевозку</button>
                             <button
-                                id="_modal-text"
+                                className="btn btn__red"
+                                onClick={() => openModal('modal-text')}
+                            >
+                                Рассчитать перевозку
+                            </button>
+                            <button
                                 className="btn btn__blue_border"
-                                onClick={() => openModal('modal-callback')}
+                                onClick={() => openModal('modal-text')}
                             >
                                 Оставить заявку
                             </button>
