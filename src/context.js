@@ -10,7 +10,8 @@ const initialState = {
         name: '',
         phone: '',
         email: '',
-        text: ','
+        text: '',
+        button: '',
     }
 }
 
