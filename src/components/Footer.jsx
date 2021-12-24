@@ -6,8 +6,32 @@ import iconPrice from '../img/footer/iconPrice.svg'
 import LoPalata from '../img/footer/LO-Palata.svg'
 import price from '../upload/baltkomplekt-price.xlsx'
 import dogovor from '../upload/dogovor_baltkomplekt_obrazets_2018.doc'
+import {sendMail} from "../http/SendMailAPI";
+import {useContext, useEffect, useState} from "react";
+import {ModalContext} from "../context";
 
 function Footer() {
+    const { form, content, error, setFormContent, closeModal } = useContext(ModalContext)
+
+    const phoneHandler = (e) => {
+        setFormContent({...content, phone: e.target.value.replace(/\D/g, '')})
+        error.phone = e.target.value.length <= 5;
+    }
+
+    const sendHandler = async (e) => {
+        e.preventDefault()
+        try {
+            if (content.phone.length) {
+                let isAdmin = window.confirm(`Хотите чтобы мы Вам перезвонили по номеру ${content.phone}?`)
+                if (isAdmin) {
+                    await sendMail('...', '...', content.phone, '...', 'Перезвонить')
+                    content.phone = ''
+                }
+            }
+        } catch (error) {
+            console.error(error)
+        }
+    }
 
     return <footer id="contact">
         <div className="footer__content container">
@@ -71,8 +95,21 @@ function Footer() {
                         <input type="hidden" name="project_name" value="Балткомплект" />
                         <input type="hidden" name="admin_email" value="info@baltkomplekt.ru" />
                         <input type="hidden" name="form_subject" value="Клиент просит перезвонить (с главной страницы)" />
-                        <input type="tel" data-tel-input name="Телефон" placeholder="+7 (999) 999 99-99" maxLength="18" />
-                        <button>Перезвонить</button>
+                        <input
+                            type="tel"
+                            data-tel-input={true}
+                            name="Телефон"
+                            placeholder="+7 (999) 999 99-99"
+                            maxLength="18"
+                            value={content.phone}
+                            onChange={e => phoneHandler(e)}
+                        />
+                        <button
+                            disabled={!content.phone.length}
+                            onClick={sendHandler}
+                        >
+                            Перезвонить
+                        </button>
                     </form>
                 </div>
             </div>
