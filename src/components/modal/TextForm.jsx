@@ -1,18 +1,63 @@
 import bg from "../../img/modal/modalText/bg.svg"
 import {ModalContext} from "../../context";
-import {useContext, useState} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import {sendMail} from "../../http/SendMailAPI";
 
 function TextForm() {
-    const {form, content, setFormContent} = useContext(ModalContext)
+    const { form, content, error, setFormContent, closeModal } = useContext(ModalContext)
+    const [dirtyName, setDirtyName] = useState(false)
+    const [dirtyEmail, setDirtyEmail] = useState(false)
+    const [dirtyPhone, setDirtyPhone] = useState(false)
 
-    const handleSend = async (e) => {
+    const blurHandler = (e) => {
+        switch (e.target.name) {
+            case 'email': setDirtyEmail(true)
+                break
+            case 'name': setDirtyName(true)
+                break
+            case 'phone': setDirtyPhone(true)
+                break
+        }
+    }
+
+    const nameHandler = (e) => {
+        setFormContent({...content, name: e.target.value})
+        error.name = e.target.value.length <= 0;
+    }
+
+    const emailHandler = (e) =>{
+        setFormContent({...content, email: e.target.value})
+        const emailReg = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+        error.email = !emailReg.test(String(e.target.value).toLowerCase());
+    }
+
+    const phoneHandler = (e) => {
+        setFormContent({...content, phone: e.target.value.replace(/\D/g, '')})
+        error.phone = e.target.value.length <= 5;
+    }
+
+    const sendHandler = async (e) => {
+        e.preventDefault()
         try {
-            await sendMail(content.name, content.email, content.phone, content.text, 'Оставить заявку')
+            let isAdmin = window.confirm("Отправить заявку?")
+            if (isAdmin) {
+                await sendMail(content.name, content.email, content.phone, content.text, 'Оставить заявку')
+            }
         } catch (error) {
             console.error(error)
         }
+        closeModal(form)
     }
+
+    const [validate, setValidate] = useState(true)
+
+    useEffect(()=> {
+        if (!error.name && !error.email && !error.phone) {
+            setValidate(false)
+        } else {
+            setValidate(true)
+        }
+    },[error.name, error.email, error.phone])
 
     return <div className={form === 'modal-text' ? "modal-content modal-text active" : "modal-content modal-text"}>
         <h3>Оставьте заявку на расчет полной <br/> комплексной стоимости</h3>
@@ -22,36 +67,55 @@ function TextForm() {
         <form className="form-start">
             <div className="form-start__content">
                 <div className="form-group">
-                    <span className="preText">Имя</span>
+                    {dirtyName && error.name ?
+                        <span className="errorText">Поле ИМЯ обязательно к заполнению</span>
+                        :
+                        <span className="preText">Имя</span>
+                    }
                     <input
+                        style={dirtyName && error.name ? {border: '1px solid #ff000055'} : null}
                         required
                         type="text"
                         className="form-control-start"
-                        name="Имя"
+                        name="name"
                         placeholder="Василий"
                         value={content.name}
-                        onChange={e => setFormContent({...content, name: e.target.value})}
+                        onBlur={e => blurHandler(e)}
+                        onChange={e => nameHandler(e)}
                     />
-                    <span className="preText">Почта</span>
+                    {dirtyEmail && error.email ?
+                        <span className="errorText">Поле Почта обязательно к заполнению</span>
+                        :
+                        <span className="preText">Почта</span>
+                    }
                     <input
+                        style={dirtyEmail && error.email ? {border: '1px solid #ff000055'} : null}
                         required
                         type="text"
                         className="form-control-start"
-                        name="Почта"
+                        name="email"
                         placeholder="Ваш почтовый адрес"
                         value={content.email}
-                        onChange={e => setFormContent({...content, email: e.target.value})}
+                        onBlur={e => blurHandler(e)}
+                        onChange={e => emailHandler(e)}
                     />
-                    <span className="preText">Телефон</span>
+                    {dirtyPhone && error.phone ?
+                        <span className="errorText">Поле Телефон обязательно к заполнению</span>
+                        :
+                        <span className="preText">Телефон</span>
+                    }
                     <input
+                        style={dirtyPhone && error.phone ? {border: '1px solid #ff000055'} : null}
                         required
                         type="tel"
-                        // data-tel-unput
+                        data-tel-input={true}
                         className="form-control-start"
-                        name="Телефон"
+                        name="phone"
                         placeholder="+7 (XXX) xxx xx-xx"
+                        maxLength="18"
                         value={content.phone}
-                        onChange={e => setFormContent({...content, phone: e.target.value})}
+                        onBlur={e => blurHandler(e)}
+                        onChange={e => phoneHandler(e)}
                     />
                     <span className="preText">Ваш запрос</span>
                     <textarea
@@ -67,8 +131,9 @@ function TextForm() {
             </div>
             <button
                 type="submit"
+                disabled={validate}
                 className="btn modal-btn"
-                onClick={handleSend}
+                onClick={sendHandler}
             >
                 Оставить заявку
             </button>

@@ -2,7 +2,7 @@ import App from './App';
 import React, {createContext} from 'react';
 import ReactDOM from 'react-dom';
 import UserStore from "./store/UserStore";
-import './phonemask'
+// import './phonemask'
 import './index.scss';
 import BlogStore from "./store/BlogStore";
 

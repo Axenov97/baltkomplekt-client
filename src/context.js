@@ -12,6 +12,16 @@ const initialState = {
         email: '',
         text: '',
         button: '',
+    },
+    error: {
+        name: true,
+        phone: true,
+        email: true
+    },
+    dirty: {
+        name: false,
+        phone: false,
+        email: false
     }
 }
 
@@ -21,13 +31,14 @@ export const ContextProvider = ({children}) => {
     value.openModal = (form) => {
         dispatch({ type: 'OPEN_MODAL', payload: {form: form} })
     }
-    value.closeModal = (form) => {
-        dispatch({ type: 'CLOSE_MODAL', payload: {form: form}})
+    value.closeModal = (form, content, dirty, error) => {
+        dispatch({ type: 'CLOSE_MODAL', payload: {form: form, content: content, dirty: dirty, error: error}})
     }
 
     value.setFormContent = (content) => {
         dispatch({ type: 'SET_FORM_CONTENT', payload: {content: content}})
     }
+
 
     return <ModalContext.Provider value={value}>
         {children}

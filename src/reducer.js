@@ -14,6 +14,23 @@ export function reducer(state, {type, payload}) {
                 ...state,
                 modalActive: false,
                 form: payload.form,
+                content: {
+                    name: '',
+                    phone: '',
+                    email: '',
+                    text: '',
+                    button: '',
+                },
+                error: {
+                    name: true,
+                    phone: true,
+                    email: true
+                },
+                dirty: {
+                    name: false,
+                    phone: false,
+                    email: false
+                },
                 overflowBody: document.body.style.overflowY = "scroll",
                 paddingBody: document.body.style.paddingRight = "0px"
             }
