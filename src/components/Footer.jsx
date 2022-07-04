@@ -7,7 +7,7 @@ import LoPalata from '../img/footer/LO-Palata.svg'
 import price from '../upload/baltkomplekt-price.xlsx'
 import dogovor from '../upload/dogovor_baltkomplekt_obrazets_2018.doc'
 import {sendMail} from "../http/SendMailAPI";
-import {useContext, useEffect, useState} from "react";
+import {useContext} from "react";
 import {ModalContext} from "../context";
 
 function Footer() {
@@ -15,7 +15,6 @@ function Footer() {
 
     const phoneHandler = (e) => {
         setFormContent({...content, phone: e.target.value.replace(/\D/g, '')})
-        error.phone = e.target.value.length <= 5;
     }
 
     const sendHandler = async (e) => {
@@ -97,15 +96,16 @@ function Footer() {
                         <input type="hidden" name="form_subject" value="Клиент просит перезвонить (с главной страницы)" />
                         <input
                             type="tel"
+                            className='phone-input'
                             data-tel-input={true}
                             name="Телефон"
-                            placeholder="+7 (999) 999 99-99"
+                            placeholder="+7 (812) 999 99-99"
                             maxLength="18"
                             value={content.phone}
                             onChange={e => phoneHandler(e)}
                         />
                         <button
-                            disabled={!content.phone.length}
+                            disabled={content.phone.length <= 5}
                             onClick={sendHandler}
                         >
                             Перезвонить

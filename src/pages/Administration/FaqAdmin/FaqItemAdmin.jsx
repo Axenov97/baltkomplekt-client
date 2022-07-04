@@ -2,7 +2,7 @@ import '../admin.scss'
 import {useContext, useState} from "react";
 import {observer} from "mobx-react-lite";
 import {changeFaq, fetchFaq, removeFaq} from "../../../http/FaqAPI";
-import {Context} from "../../../index";
+import {Context} from "../../../App";
 
 const FaqItemAdmin = observer(({id, question, answer}) => {
 

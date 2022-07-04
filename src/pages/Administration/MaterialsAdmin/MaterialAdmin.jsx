@@ -1,7 +1,7 @@
 import '../admin.scss'
 import {useContext, useState} from "react";
 import {observer} from "mobx-react-lite";
-import {Context} from "../../../index";
+import {Context} from "../../../App";
 import {changeMaterials, fetchMaterials, removeMaterials} from "../../../http/MaterialsAPI";
 
 const MaterialAdmin = observer((props) => {

@@ -3,6 +3,7 @@ import {useLocation} from "react-router-dom";
 import {getStartContent} from "../../data";
 import {ModalContext} from "../../context";
 import {useContext} from 'react'
+import {sendYandexMetrik} from "../../utils/metriks";
 
 function FirstSection(){
     let location = useLocation();
@@ -25,7 +26,10 @@ function FirstSection(){
                             </button>
                             <button
                                 className="btn btn__blue_border"
-                                onClick={() => openModal('modal-text')}
+                                onClick={() => {
+                                    openModal('modal-text')
+                                    sendYandexMetrik('reachGoal','ButtonZayavka')
+                                }}
                             >
                                 Оставить заявку
                             </button>

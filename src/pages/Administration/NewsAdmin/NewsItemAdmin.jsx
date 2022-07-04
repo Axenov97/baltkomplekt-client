@@ -1,7 +1,7 @@
 import './../admin.scss'
 import React, {useContext, useState} from 'react';
 import {observer} from "mobx-react-lite";
-import {Context} from "../../../index";
+import {Context} from "../../../App";
 import {changeNews, fetchNews, removeNews} from "../../../http/NewsAPI";
 
 const NewsItemAdmin = observer(({id, title, description}) => {

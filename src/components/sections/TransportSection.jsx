@@ -1,5 +1,6 @@
 import {ModalContext} from "../../context";
 import {useContext} from 'react'
+import {sendYandexMetrik} from "../../utils/metriks";
 
 function TransportSection(){
     const {openModal} = useContext(ModalContext)
@@ -31,7 +32,12 @@ function TransportSection(){
                 <li>услуги по экспедированию грузов.</li>
             </ul>
             <button id="_modal-calculate" className="btn btn__red">Рассчитать перевозку</button>
-            <button id="_modal-text" className="btn btn__blue_border" onClick={()=>openModal('modal-text')}>Оставить заявку</button>
+            <button id="_modal-text" className="btn btn__blue_border" onClick={()=>{
+                openModal('modal-text')
+                sendYandexMetrik('reachGoal','ButtonZayavka')
+            }}>
+                Оставить заявку
+            </button>
         </div>
     </section>
 }

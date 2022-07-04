@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {Header} from "../components/Header";
 import {Footer} from "../components/Footer";
 import {Helmet} from "react-helmet";
@@ -11,14 +11,12 @@ function Contacts() {
     }, []);
 
     return <>
-        <Helmet
-            title="Балткомплект | Контактная информация "
-            meta={[
-                {
-                    "name": "description",
-                    "content": "Все контактные данные компании Балткомплект в одном месте"}
-            ]}
-        />
+        <Helmet >
+            <html lang="ru" />
+            <title>Балткомплект - таможенный брокер из Санкт-Петербурга | Контактная информация</title>
+            <meta name='description' content="Все контактные данные компании Балткомплект на одной странице"/>
+        </Helmet>
+
         <div className='contacts-container'>
             <Header />
             <div className='content' />

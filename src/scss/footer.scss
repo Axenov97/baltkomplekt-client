@@ -41,10 +41,10 @@ footer{
 				text-align: center;
 				padding: 2%;
 				&:nth-child(1) {
-					width: 22%;
+					width: 35%;
 				}
 				&:nth-child(2) {
-					width: 35%;
+					width: 45%;
 				}
 				img, p{
 					display: inline-block;
@@ -104,7 +104,7 @@ footer{
 			padding:2%;
 			margin-top: 1%;
 			.footer__callback_name{
-				flex: 45% 1 1;
+				flex: 40% 1 1;
 			}
 			form{
 				flex: 55% 1 1;
@@ -134,10 +134,12 @@ footer{
 				border: 1px solid #B2BBB9;
 				box-sizing: border-box;
 				border-radius: 4px;
+				padding-left: 2%;
 			}
 			button{
 				@extend %btn;
 				width: 45%;
+				margin: 0 0 0 2%;
 				color: $white;
 				background-color: $blue;
 			}
@@ -231,6 +233,7 @@ footer{
 				button{
 					width: 100%;
 					height: 50px;
+					margin: 1% 0;
 				}
 			}	
 		}

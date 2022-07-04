@@ -1,4 +1,3 @@
-import { ReactComponent as Logo } from '../img/logo.svg';
 import logo from '../img/logo.svg'
 import {NavLink, useLocation} from "react-router-dom";
 import {ModalContext} from "../context";
@@ -45,17 +44,17 @@ function Header() {
                                         Услуги
                                     </p>
                                         <ul className={subLinkOpen ? 'submenu open' : 'submenu'}>
-                                            <li><NavLink to="/services/custom-clearance" onClick={handleServicesSubMenu}>Таможенное оформление</NavLink></li>
-                                            <li><NavLink to="/services/transport-services" onClick={handleServicesSubMenu}>Транспортные услуги</NavLink></li>
-                                            <li><NavLink to="/services/ved" onClick={handleServicesSubMenu}>Вэд</NavLink></li>
-                                            <li><NavLink to="/services/solutions" onClick={handleServicesSubMenu}>Классификационные решения</NavLink>
-                                            </li>
+                                            <li><NavLink to="/services/custom-clearance/" onClick={handleServicesSubMenu}>Таможенное оформление</NavLink></li>
+                                            <li><NavLink to="/services/transport-services/" onClick={handleServicesSubMenu}>Транспортные услуги</NavLink></li>
+                                            <li><NavLink to="/services/ved/" onClick={handleServicesSubMenu}>Вэд</NavLink></li>
+                                            <li><NavLink to="/services/solutions/" onClick={handleServicesSubMenu}>Классификационные решения</NavLink></li>
+                                            <li><NavLink to="/services/audit/" onClick={handleServicesSubMenu}>Таможенный аудит</NavLink></li>
                                         </ul>
                                     </li>
 
-                                    <li><NavLink to='/blog'>Блог</NavLink></li>
-                                    <li><NavLink to="/contacts" id="contactBtn">Контакты</NavLink></li>
-                                    <li><NavLink to='/about'>О нас</NavLink></li>
+                                    <li><NavLink to='/blog/'>Блог</NavLink></li>
+                                    <li><NavLink to="/contacts/" id="contactBtn">Контакты</NavLink></li>
+                                    <li><NavLink to='/about/'>О нас</NavLink></li>
                                 </ul>
                             </nav>
                         </div>

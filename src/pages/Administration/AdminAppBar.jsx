@@ -9,7 +9,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import QuizIcon from '@mui/icons-material/Quiz';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
-import {Context} from "../../index";
+import {Context} from "../../App";
 import {LOGIN_ROUTE} from "../../utils/consts";
 import {observer} from "mobx-react-lite";
 

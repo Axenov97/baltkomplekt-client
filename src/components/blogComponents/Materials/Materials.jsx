@@ -1,11 +1,11 @@
 import {MaterialsItem} from "./MaterialsItem";
 import React, {useContext, useEffect, useState} from "react";
-import {Context} from "../../../index";
 import {fetchMaterials} from "../../../http/MaterialsAPI";
 import {observer} from "mobx-react-lite";
 import {Helmet} from "react-helmet";
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
+import {Context} from "../../../App";
 
 const Materials = observer(() => {
     const {blog} = useContext(Context)

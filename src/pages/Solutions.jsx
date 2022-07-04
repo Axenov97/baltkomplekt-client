@@ -6,7 +6,7 @@ import {PriceSection} from "../components/sections/PriceSection";
 import {BlogSection} from "../components/blogComponents/BlogSection";
 import {SolutionsSection} from "../components/sections/SolutionsSection";
 
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {BlogLinkGroup} from "../components/blogComponents/BlogLinkGroup";
 import {HockeySection} from "../components/sections/HockeySection";
 import {Helmet} from "react-helmet";
@@ -22,16 +22,14 @@ function Solutions() {
     }, []);
 
     return <>
-        <Helmet
-            title="Получение предварительного классификационного решения | Балткомплект"
-            meta={[
-                {
-                    "name": "description",
-                    "content": "Балткомплект помогает партнерам в получении предварительных классификационных решений " +
-                        "на товар, а также в получении классификационных решений на ввоз многокомпонентного оборудования, " +
-                        "форма предварительного решения по классификации товара в соответствии с ТН ВЭД ТС"}
-            ]}
-        />
+        <Helmet >
+            <html lang="ru" />
+            <title>Балткомплект. Получение предварительного классификационного решения</title>
+
+            <meta name='description' content="Балткомплект помогает партнерам в получении предварительных классификационных решений на товар,
+             а также в получении классификационных решений на ввоз многокомпонентного оборудования в соответствии с ТН ВЭД ТС" />
+        </Helmet>
+
         <FirstSection />
         <img src={priceBg} className='price__bg' alt='балткомплект'/>
         <ServicesSection />

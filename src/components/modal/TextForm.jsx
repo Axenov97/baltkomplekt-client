@@ -111,7 +111,7 @@ function TextForm() {
                         data-tel-input={true}
                         className="form-control-start"
                         name="phone"
-                        placeholder="+7 (XXX) xxx xx-xx"
+                        placeholder="+7 (812) 999-99-99"
                         maxLength="18"
                         value={content.phone}
                         onBlur={e => blurHandler(e)}

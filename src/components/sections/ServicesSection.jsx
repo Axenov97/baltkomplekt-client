@@ -6,7 +6,7 @@ function ServicesSection(){
             <h2 className="blue__head">Услуги</h2>
             <div className="flex-container">
                 <div className="services__content">
-                    <NavLink to="/services/custom-clearance">
+                    <NavLink to="/services/custom-clearance/">
                         <div className="services__content_left">
                             <h2>Таможенное оформление:</h2>
                             <h3>Таможенное декларирование любых товаров и грузов:</h3>
@@ -34,7 +34,7 @@ function ServicesSection(){
                 </div>
 
                 <div className="services__content services__content_center">
-                    <NavLink to="/services/transport-services">
+                    <NavLink to="/services/transport-services/">
                         <div className="top-block">
                             <h2>Транспортно-экспедиторское обслуживание:</h2>
                             <h3>Способы перевозок:</h3>
@@ -43,6 +43,7 @@ function ServicesSection(){
                                 Автоперевозки<br/>
                                 Авиаперевозки<br/>
                                 Ж/Д перевозки<br/>
+                                Мультимодальные перевозки<br/>
                             </p>
                             <h3>Виды перевозок:</h3>
                             <p>
@@ -56,16 +57,16 @@ function ServicesSection(){
                             </p>
                         </div>
                     </NavLink>
-                    <NavLink to="/services/ved">
+                    <NavLink to="/services/ved/">
                         <div className="bottom-block">
                             <h2>Внешняя экономическая деятельность</h2>
                             <p>
-                                Правильный контракта<br/>
-                                Технический импортера<br/>
-                                Собрание документов<br/>
+                                Правильный контракт<br/>
+                                Технический импортер<br/>
+                                Подготовка документов<br/>
                                 Прохождение таможни<br/>
                                 Доставка товаров на условиях INCOTERMS<br/>
-                                Отчитываемся перед ФНС
+                                Отчет перед ФНС
                             </p>
 
                         </div>
@@ -73,7 +74,7 @@ function ServicesSection(){
                 </div>
 
                 <div className="services__content services__content_right">
-                    <NavLink to="/services/solutions">
+                    <NavLink to="/services/solutions/">
                         <div className="top-block">
                             <h2>Классификационные решения</h2>
                             <p>Получение предварительного классификационного решения на товар</p>
@@ -81,7 +82,7 @@ function ServicesSection(){
                                 разобранном или несобранном виде</p>
                         </div>
                     </NavLink>
-                    <NavLink to="/services/custom-clearance">
+                    <NavLink to="/services/custom-clearance/">
                         <div className="bottom-block">
                             <h2>Прочее</h2>
                             <p> - Финансовое сопровождения сделок;<br/>

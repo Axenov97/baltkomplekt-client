@@ -1,6 +1,6 @@
 import '../admin.scss'
 import React, {useContext, useState} from "react";
-import {Context} from "../../../index";
+import {Context} from "../../../App";
 import {observer} from "mobx-react-lite";
 import {createNews, fetchNews} from "../../../http/NewsAPI";
 
@@ -18,7 +18,7 @@ const AddNews = observer(() => {
     }
 
     const addNewNews = async () =>{
-        await createNews(title, description).then(data => {
+        await createNews(title, description, 'description_2', 'description_3', 'keywords').then(data => {
             setTitle('')
             setDescription('')
             setAddNews(false)

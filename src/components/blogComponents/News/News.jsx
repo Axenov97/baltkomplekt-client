@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {observer} from "mobx-react-lite";
 import {fetchNews} from "../../../http/NewsAPI";
-import {Context} from "../../../index";
+import {Context} from "../../../App";
 import NewsItem from "./NewsItem";
 import Pages from "../Pages";
 import './news.scss';

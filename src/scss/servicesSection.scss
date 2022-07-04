@@ -69,11 +69,11 @@
 		.services__content{
 			&.services__content_center, &.services__content_right{
 				.top-block, .bottom-block{
-					opacity: 0.5;
+					opacity: 0.7;
 				}
 			}
 			.services__content_left{
-					opacity: 0.5;
+					opacity: 0.7;
 			}
 			a{
 				&:hover .services__content_left, &:hover .top-block, &:hover .bottom-block{

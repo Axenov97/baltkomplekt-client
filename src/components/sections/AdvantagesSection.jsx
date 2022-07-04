@@ -22,7 +22,7 @@ function AdvantagesSection(){
                     <div className="advantages__elem">
                         <img src={advantagesSecondImage} alt='балткомплект'/>
                             <div className="advanteges__elem_text">
-                                <h5 className="advanteges__elem_bold">20 лет опыта</h5>
+                                <h5 className="advanteges__elem_bold">30 лет опыта</h5>
                                 <p>Профессиональный подход и отлаженная работа с органами</p>
                             </div>
                     </div>

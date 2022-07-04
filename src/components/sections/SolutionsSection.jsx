@@ -3,6 +3,7 @@ import BK_Pres_2020 from '../../upload/BK_Pres_2020.pdf'
 import BK_Pres_2020_2 from '../../upload/BK_Pres_2020_2.pdf'
 import {useContext} from 'react'
 import {ModalContext} from "../../context";
+import {sendYandexMetrik} from "../../utils/metriks";
 
 function SolutionsSection(){
     const {openModal} = useContext(ModalContext)
@@ -38,7 +39,10 @@ function SolutionsSection(){
                         <button
                             id="_modal-text"
                             className="btn btn__lightblue"
-                            onClick={()=>openModal('modal-text')}
+                            onClick={()=>{
+                                openModal('modal-text')
+                                sendYandexMetrik('reachGoal','ButtonZayavka')
+                            }}
                         >
                             Оставить заявку
                         </button>
@@ -91,7 +95,10 @@ function SolutionsSection(){
                         <button
                             id="_modal-text"
                             className="btn btn__lightblue"
-                            onClick={()=>openModal('modal-text')}
+                            onClick={()=>{
+                                openModal('modal-text')
+                                sendYandexMetrik('reachGoal','ButtonZayavka')
+                            }}
                         >
                             Оставить заявку
                         </button>
@@ -117,7 +124,10 @@ function SolutionsSection(){
                         <button
                             id="_modal-text"
                             className="btn btn__lightblue"
-                            onClick={()=>openModal('modal-text')}
+                            onClick={()=>{
+                                openModal('modal-text')
+                                sendYandexMetrik('reachGoal','ButtonZayavka')
+                            }}
                         >
                             Оставить заявку
                         </button>

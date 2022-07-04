@@ -86,9 +86,9 @@ function CallbackForm() {
                         style={dirtyPhone && error.phone ? {border: '1px solid #ff000055'} : null}
                         type="tel"
                         data-tel-input={true}
-                        className="form-control-start"
+                        className="form-control-start phone-input"
                         name="Телефон"
-                        placeholder="+7 (999) 999 99-99"
+                        placeholder="+7 (812) 999 99-99"
                         maxLength="18"
                         value={content.phone}
                         onBlur={e => blurHandler(e)}

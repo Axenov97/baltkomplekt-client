@@ -24,7 +24,7 @@ function Layout(props) {
             <animated.div key={key} style={props}>
                 <div
                     className = { location.pathname.includes('/services/') ?
-                    'content ' + location.pathname.substr(10) : 'content' }
+                    'content ' + location.pathname.substring(10, location.pathname.length - 1) : 'content' }
                 >
                     <Outlet />
                 </div>

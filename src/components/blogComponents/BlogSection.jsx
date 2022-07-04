@@ -7,13 +7,13 @@ function BlogSection() {
                 <div className="container">
                     <div className="flex-container">
                         <div className="blog__elem">
-                            <Link to='/blog/faq'>
+                            <Link to='/blog/faq/'>
                                 <h3>Ответы на популярные вопросы</h3>
                                 <p>В чем отличия между таможенным брокером и таможенным представителем?</p>
                             </Link>
                         </div>
                         <div className="blog__elem">
-                           <Link to='/blog/cases'>
+                           <Link to='/blog/cases/'>
                                <h3>Интересные кейсы от “Балткомплект”</h3>
                                <p>
                                    <b>Входные данные:</b> Наша фирма хотела бы стать участником внешней экономической деятельности.
@@ -26,7 +26,7 @@ function BlogSection() {
                            </Link>
                         </div>
                         <div className="blog__elem">
-                            <Link to='/blog/materials'>
+                            <Link to='/blog/materials/'>
                                 <h3>Таможенное декларирование грузов и товаров</h3>
                                 <p>
                                     Законодательные нормы РФ предусматривают необходимость оформления ввозимых и вывозимых через госграницу товаров.
@@ -35,7 +35,7 @@ function BlogSection() {
                             </Link>
                         </div>
                         <div className="blog__elem">
-                            <Link to='/blog/news'>
+                            <Link to='/blog/materials/'>
                                 <h3>Тонкости таможенного оформления при международных перевозках</h3>
                                 <p>
                                     Таможенное оформление — важный этап в осуществлении международных перевозок грузов.
@@ -44,7 +44,7 @@ function BlogSection() {
                             </Link>
                         </div>
                         <div className="blog__elem">
-                            <Link to='/blog/news'>
+                            <Link to='/blog/news/'>
                                 <h3>Свежие новости</h3>
                                 <p>Публикуем только самое интересное и важное в мире таможни</p>
                             </Link>

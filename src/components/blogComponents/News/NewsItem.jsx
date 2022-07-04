@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import loadingImage from "../../../img/image-loading.svg";
 
-const NewsItem = ({title, description, description_2, description_3, image, publish_date}) => {
+const NewsItem = ({title, description, image, publish_date}) => {
     const [buttonToggle, setButtonToggle] = useState(false)
     const newDescription = description
         .replace(/(<([^>]+)>)/ig,"")

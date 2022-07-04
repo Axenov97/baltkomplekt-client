@@ -22,9 +22,11 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
+    "react-helmet-async": "^1.2.2",
     "react-router": "^5.2.1",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
+    "react-snap": "^1.23.0",
     "react-spring": "^8.0.2",
     "swiper": "^7.3.1",
     "web-vitals": "^1.1.2"
@@ -33,9 +35,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "react-snap"
   },
-  "proxy": "https://root@vm671464.vps.masterhost.tech:8080",
+  "reactSnap": {
+    "fixWebpackChunksIssue": false,
+    "inlineCss": false
+  },
+  "proxy": "https://root@vm671464.vps.masterhost.tech",
   "eslintConfig": {
     "extends": [
       "react-app",

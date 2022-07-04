@@ -6,6 +6,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule . /index.html [L]
 
+ErrorDocument 404 http://localhost:3000/404
+
 # ЧПУ
 #	RewriteRule ^services/tamojennoe-oformlenie services/custom-clearance [R=301,L]
 #	RewriteRule ^services/perevozka-opasnykh-gruzov services/custom-clearance [R=301,L]

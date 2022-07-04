@@ -1,6 +1,6 @@
 import '../admin.scss'
 import React, {useContext, useState} from "react";
-import {Context} from "../../../index";
+import {Context} from "../../../App";
 import {observer} from "mobx-react-lite";
 import {createMaterials, fetchMaterials} from "../../../http/MaterialsAPI";
 

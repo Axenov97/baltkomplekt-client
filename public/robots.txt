@@ -1,15 +1,18 @@
-User-agent: Yandex
-Allow: /*.js
-Allow: /*.css
-Disallow: /admin/
-Host: baltkomplekt.ru
-
-User-agent: Googlebot
-Allow: /*.js
-Allow: /*.css
-Disallow: /admin/
-
 User-agent: *
-Disallow: /admin/
+Allow: /*.js
+Allow: /*.css
+Allow: /blog
+Allow: /blog/materials
+Allow: /blog/cases
+Allow: /blog/faq
+Allow: /blog/news
+Allow: /about
+Allow: /contacts
+Allow: /services/custom-clearance
+Allow: /services/transport-services
+Allow: /services/ved
+Allow: /services/solutions
+
+Disallow: /admin
 Disallow: /login
 Sitemap: https://www.baltkomplekt.ru/sitemap.xml

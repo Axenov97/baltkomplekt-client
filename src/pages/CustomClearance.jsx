@@ -4,7 +4,7 @@ import {ServicesSection} from "../components/sections/ServicesSection";
 import {StuffSection} from "../components/sections/StuffSection";
 import {PriceSection} from "../components/sections/PriceSection";
 import {BlogSection} from "../components/blogComponents/BlogSection";
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {AdvantagesSection} from "../components/sections/AdvantagesSection";
 import {BlogLinkGroup} from "../components/blogComponents/BlogLinkGroup";
 import {HockeySection} from "../components/sections/HockeySection";
@@ -21,16 +21,12 @@ function CustomClearance() {
     }, []);
 
     return <>
-        <Helmet
-            title="Балткомплект | Таможенное оформление товаров и грузов в Санкт-Петербурге и по всей России"
-            meta={[
-                {
-                    "name": "description",
-                    "content": "Балткомплект предоставляет услуги таможенного оформления более 20 лет." +
-                        " Узнайте сроки таможенного оформления." +
-                        " Мы работаем по всей России из Санкт-петербурга."}
-            ]}
-        />
+        <Helmet >
+            <html lang="ru" />
+            <title>Балткомплект. Таможенное оформление грузов и товаров в Санкт-Петербурге, Москве и по всей России</title>
+            <meta name='description' content="Балткомплект предоставляет услуги таможенного оформления более 20 лет. Узнайте стоимость таможенного брокера. Таможенное оформление в Санкт-петербурге." />
+        </Helmet>
+
         <FirstSection />
         <img src={priceBg} className='price__bg' alt='балткомплект'/>
         <ServicesSection />

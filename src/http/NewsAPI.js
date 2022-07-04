@@ -1,7 +1,7 @@
 import {$authHost, $host} from "./index";
 
-export const createNews = async (title, description) => {
-    const {data} = await $authHost.post('api/news', {title, description})
+export const createNews = async (title, description, description_2, description_3, keywords) => {
+    const {data} = await $authHost.post('api/news', {title, description, description_2, description_3, keywords})
     return data
 }
 

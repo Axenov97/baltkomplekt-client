@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import React, {useEffect} from 'react'
 
 import {AboutUsSection} from "../components/sections/AboutUsSection";
 import {FirstSection} from "../components/sections/FirstSection";
@@ -11,8 +11,15 @@ import {BlogLinkGroup} from "../components/blogComponents/BlogLinkGroup";
 import {HockeySection} from "../components/sections/HockeySection";
 import {ClientsSection} from "../components/sections/ClientsSection";
 import {Helmet} from "react-helmet";
+import AuditSection from "../components/sections/AuditSection";
 
-function Home() {
+
+
+function Home({auditButtonDisable, setAuditButtonDisable}) {
+
+    useEffect(()=>{
+        setAuditButtonDisable(true)
+    },[])
 
     useEffect(() => {
         const body = document.querySelector('#root');
@@ -20,18 +27,14 @@ function Home() {
     }, []);
 
     return <>
-        <Helmet
-            title="Балткомплект | Таможенный брокер СПб | Таможенное оформление по всей России"
-            meta={[
-                {
-                    "name": "description",
-                    "content": "Таможенный брокер Балткомплект является одним из самых проверенных представителей " +
-                        "на рынке таможенного оформления грузов и товаров. " +
-                        "Балткомплект лучший таможенный представитель в сфере таможни!"
-                }
-            ]}
-        />
+            <Helmet >
+                <html lang="ru" />
+                <title>Балткомплект - таможенный брокер для юридических лиц. Стоимость услуг таможенного брокера в СПб, Москве и по всей России</title>
+                <meta name='description' content="Таможенный брокер Балткомплект - самый надежный и проверенный представитель на рынке таможенного оформления грузов и товаров. Балткомплект однозначно лучший таможенный брокер в Санкт-Петербурге и по всей России!"/>
+            </Helmet>
+
         <FirstSection />
+        <AuditSection auditButtonDisable={auditButtonDisable}/>
         <AboutUsSection />
         <ClientsSection />
         <StrengthSection />

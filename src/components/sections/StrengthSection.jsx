@@ -1,6 +1,7 @@
 import strength from '../../img/strength.svg'
 import {ModalContext} from "../../context";
 import {useContext} from 'react'
+import {sendYandexMetrik} from "../../utils/metriks";
 
 function StrengthSection(){
     const {openModal} = useContext(ModalContext)
@@ -44,10 +45,18 @@ function StrengthSection(){
                                 <br/>- Маршруты (пункты отправления и доставки);
                                 <br/>- Условия контракта.
                             </p>
-                            <p> После того, как запрос будет обработан нашими менеджерами, мы информируем вас о стоимости
+                            <p> После того, как запрос будет обработан нашими менеджерами, мы проинформируем вас о стоимости
                                 наших услуг по транспортировке и таможенному оформлению вашего груза.</p>
 
-                            <button id="_modal-text" className="btn" onClick={()=>openModal('modal-text')}>Оставить заявку</button>
+                            <button
+                                id="_modal-text"
+                                className="btn"
+                                onClick={()=>{
+                                    openModal('modal-text')
+                                    sendYandexMetrik('reachGoal','ButtonZayavka')
+                                }}>
+                                    Оставить заявку
+                            </button>
                         </div>
                     </div>
                 </div>

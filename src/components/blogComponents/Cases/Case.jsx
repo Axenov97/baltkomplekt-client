@@ -1,4 +1,3 @@
-import loadingImage from "../../../img/image-loading.svg";
 import './cases.scss'
 import {useState} from "react";
 

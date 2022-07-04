@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
 import './auth.scss'
 import {login} from "../../../http/UserAPI";
-import {Context} from "../../../index";
+import {Context} from "../../../App";
 import {useNavigate} from "react-router-dom";
 import {ADMIN_ROUTE} from "../../../utils/consts";
 import {observer} from "mobx-react-lite";

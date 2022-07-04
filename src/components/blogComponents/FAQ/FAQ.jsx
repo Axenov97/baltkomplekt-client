@@ -1,6 +1,6 @@
 import {Question} from "./Question";
 import React, {useContext, useEffect, useState} from "react";
-import {Context} from "../../../index";
+import {Context} from "../../../App";
 import {fetchFaq} from "../../../http/FaqAPI";
 import {observer} from "mobx-react-lite";
 import {Helmet} from "react-helmet";

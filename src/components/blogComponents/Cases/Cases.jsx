@@ -1,7 +1,7 @@
 import {Case} from "./Case";
 import {observer} from "mobx-react-lite";
 import React, {useContext, useEffect, useState} from "react";
-import {Context} from "../../../index";
+import {Context} from "../../../App";
 import {fetchCases} from "../../../http/CasesAPI";
 import {Helmet} from "react-helmet";
 import Box from "@mui/material/Box";

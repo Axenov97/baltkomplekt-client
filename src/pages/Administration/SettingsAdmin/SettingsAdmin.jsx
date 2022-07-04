@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import '../admin.scss'
 import './settings.scss'
-import {Context} from "../../../index";
+import {Context} from "../../../App";
 import {changePassword} from "../../../http/UserAPI";
 import {LOGIN_ROUTE} from "../../../utils/consts";
 import {observer} from "mobx-react-lite";

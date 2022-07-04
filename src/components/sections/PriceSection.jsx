@@ -1,6 +1,7 @@
 import {ModalContext} from "../../context";
 import {useContext, useState} from 'react'
 import price from '../../upload/baltkomplekt-price.xlsx'
+import {sendYandexMetrik} from "../../utils/metriks";
 
 function PriceSection(){
     const {openModal} = useContext(ModalContext)
@@ -25,7 +26,7 @@ function PriceSection(){
 
                             <tr className="strong strong_first">
                                 <td colSpan="2">Оформление документов в режиме «Выпуск для внутреннего потребления» в
-                                    Санкт-Петербургской, Пулковской, Балтийс
+                                    Санкт-Петербургской, Пулковской, Балтийской таможнях
                                 </td>
                             </tr>
 
@@ -215,10 +216,13 @@ function PriceSection(){
                         <a href={price} target="_blank" rel="noreferrer" className="btn__left">Скачать прайс</a>
                         <div className="btn__right">
                             <button id="_modal-calculate" className="btn" onClick={()=>openModal('modal-text')}>Рассчитать перевозку</button>
-                            <button id="_modal-text" className="btn" onClick={()=>openModal('modal-text')}>Оставить заявку</button>
+                            <button id="_modal-text" className="btn" onClick={()=>{
+                                openModal('modal-text')
+                                sendYandexMetrik('reachGoal','ButtonZayavka')}
+                            }>Оставить заявку</button>
                         </div>
                     </div>
-                    <p className='disclaimer'>Не является публичной офертой. Окончательные цены будут установлены после согласования документов, товара, кол-ва партий и т.д.)</p>
+                    <p className='disclaimer'>Не является публичной офертой. Окончательные цены будут установлены после согласования документов, товара, количества партий и др.</p>
                 </div>
             </div>
         </section>
