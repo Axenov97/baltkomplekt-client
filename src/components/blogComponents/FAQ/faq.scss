@@ -15,8 +15,9 @@
   img{
     width: 30px;
   }
-  .content{
+  .faq-content{
     flex: 0 0 70%;
+    margin: 0!important;
   }
   button{
     margin: 0;
@@ -41,7 +42,7 @@
     padding: 16px;
     flex-direction: column;
     margin: 4% auto !important;
-    .content{
+    .faq-content{
       padding: 0;
       text-align: center;
       p{

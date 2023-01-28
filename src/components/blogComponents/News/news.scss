@@ -15,7 +15,7 @@
     width: 100%;
     height: auto;
   }
-  .content{
+  .news-content{
     display: flex;
     flex-direction: column;
     padding-left: 5%;
@@ -61,7 +61,7 @@
     img {
       display: none;
     }
-    .content{
+    .news-content{
       padding: 0;
     }
   }

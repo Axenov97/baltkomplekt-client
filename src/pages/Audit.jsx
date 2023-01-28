@@ -108,14 +108,11 @@ const Audit = ({auditButtonDisable, setAuditButtonDisable}) => {
             </div>
         </section>
 
-
-        <img src={priceBg} className='price__bg' alt='балткомплект'/>
         <ServicesSection />
         <AboutUsSection />
         <AdvantagesSection />
         <ClientsSection />
         <PriceSection />
-        <StuffSection />
         <BlogLinkGroup />
         <BlogSection />
         <HockeySection />

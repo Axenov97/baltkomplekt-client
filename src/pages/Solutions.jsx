@@ -14,7 +14,7 @@ import {ClientsSection} from "../components/sections/ClientsSection";
 import priceBg from "../img/priceBg.svg";
 
 
-function Solutions() {
+function Solutions({location}) {
 
     useEffect(() => {
         const body = document.querySelector('#root');
@@ -25,21 +25,18 @@ function Solutions() {
         <Helmet >
             <html lang="ru" />
             <title>Балткомплект. Получение предварительного классификационного решения</title>
-
             <meta name='description' content="Балткомплект помогает партнерам в получении предварительных классификационных решений на товар,
              а также в получении классификационных решений на ввоз многокомпонентного оборудования в соответствии с ТН ВЭД ТС" />
+            <link rel="canonical" href="/services/solutions/" />
         </Helmet>
 
         <FirstSection />
-        <img src={priceBg} className='price__bg' alt='балткомплект'/>
         <ServicesSection />
         <SolutionsSection />
         <AboutUsSection />
         <ClientsSection />
         <PriceSection />
-        <StuffSection />
-        <BlogLinkGroup />
-        <BlogSection />
+        <BlogSection location={location}/>
         <HockeySection />
     </>
 }

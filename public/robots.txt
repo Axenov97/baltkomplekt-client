@@ -15,4 +15,49 @@ Allow: /services/solutions
 
 Disallow: /admin
 Disallow: /login
+
+Disallow: /servicesPages/*
+Disallow: /help/*
+
+Disallow: /upload/*
+Disallow: /images/*
+Disallow: /pics/*
+Disallow: /spravka/kalkulyator-tamozhennyix-poshlin.html
+Disallow: /tamozhennoye_oformleniye_gruzov_i_tovarov/*
+Disallow: /newslist
+
+Disallow: /tamozhennoye_oformleniye_gruzov_i_tovarov
+Disallow: /tamozhennoye_oformleniye_gruzov_i_tovarov/*
+Disallow: /services/tamojennoe-oformlenie
+
+Disallow: /services/ekspedirovanie-gruzov
+Disallow: /services/tamozhennyie-sboryi
+
+
+
+Disallow: /services/pogruzochno-razgruzochnye-raboty
+
+Disallow: /services/perevozka-opasnykh-gruzov
+Disallow: /services/perevozka-opasnykh-gruzov/*
+
+Disallow: /services/perevozki-nalivnyh-gruzov
+Disallow: /services/perevozki-nalivnyh-gruzov/*
+
+Disallow:/services/perevozki-negabaritnyh-gruzov
+Disallow:/services/perevozki-negabaritnyh-gruzov/*
+
+Disallow:/services/perevozki-sbornyh-gruzov
+Disallow:/services/perevozki-sbornyh-gruzov/*
+
+Disallow: /social_projects
+Disallow: /social_projects/*
+
+Disallow: /gruzovye-perevozki
+Disallow: /gruzovye-perevozki/*
+
+
+Clean-param: etext
+Clean-param: network
+
+
 Sitemap: https://www.baltkomplekt.ru/sitemap.xml

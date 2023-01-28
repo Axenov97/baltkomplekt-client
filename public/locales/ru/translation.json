@@ -1,0 +1,16 @@
+{
+  "buttons": {
+    "calculate-shipping": "Расчитать перевозку",
+    "leave-request": "Оставить заявку",
+    "more": "more about the service",
+    "download-price": "download price",
+    "download-contract": "brokerage contract",
+    "call-back": "call back",
+    "call-me-back": "call me back",
+    "download-presentation": "download presentation",
+    "reference-materials": "reference-materials",
+    "interesting-cases": "interesting-cases",
+    "answers-on-questions": "answers-on-questions",
+    "news": "news"
+  }
+}

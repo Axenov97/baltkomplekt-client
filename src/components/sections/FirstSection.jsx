@@ -1,11 +1,10 @@
-import cubsImage from '../../img/coubs.svg'
 import {useLocation} from "react-router-dom";
 import {getStartContent} from "../../data";
 import {ModalContext} from "../../context";
-import {useContext} from 'react'
+import React, {useContext} from 'react'
 import {sendYandexMetrik} from "../../utils/metriks";
 
-function FirstSection(){
+function FirstSection( ){
     let location = useLocation();
     let startContent = getStartContent().find(item => item.path === location.pathname);
     const {openModal} = useContext(ModalContext)
@@ -15,17 +14,24 @@ function FirstSection(){
                 <div className="container">
                     <div className="flex-container">
                         <div className="first__section_left">
-                            <img src={cubsImage} className="img-coubs" alt='балткомплект'/>
                             {startContent.title}
+                            <div className="alarms">
+                                <div className='alarm'>
+                                    <p>Только юридические лица</p>
+                                </div>
+                                <div className='alarm'>
+                                    <p>Работаем в условиях санкций</p>
+                                </div>
+                            </div>
                             {startContent.description}
                             <button
-                                className="btn btn__red"
+                                className="btn btn__blue"
                                 onClick={() => openModal('modal-text')}
                             >
-                                Рассчитать перевозку
+                                Расчитать перевозку
                             </button>
                             <button
-                                className="btn btn__blue_border"
+                                className="btn btn__white_border"
                                 onClick={() => {
                                     openModal('modal-text')
                                     sendYandexMetrik('reachGoal','ButtonZayavka')

@@ -1,0 +1,37 @@
+{
+  "buttons": {
+    "calculate-shipping": "Calculate shipping",
+    "leave-request": "leave a request",
+    "more": "more about the service",
+    "download-price": "download price",
+    "download-contract": "brokerage contract",
+    "call-back": "call back",
+    "call-me-back": "call me back",
+    "download-presentation": "download presentation",
+    "reference-materials": "reference-materials",
+    "interesting-cases": "interesting-cases",
+    "answers-on-questions": "answers-on-questions",
+    "news": "news"
+  },
+  "h1": {
+    "customs-representative": "customs representative",
+    "customs-clearance":"customs clearance",
+    "freight-forwarding-service": "freight forwarding service",
+    "foreign-economic-activities":"foreign economic activities",
+    "classification-decisions": "classification decisions",
+    "customs-audit":"customs audit"
+  },
+  "utp": {
+    "customs-audit-utp": "The task of a customs audit is to find solutions that allow timely identification of risks in the conduct of foreign economic activity by the company and minimizing their negative consequences for the importer."
+  },
+  "about-section": {
+    "about-us": "about us",
+    "p1": "Группа компаний «Балткомплект» — таможенный представитель/брокер в России с опытом работы более 20 лет.",
+    "p2": "Предоставляем услуги по всей России. Работаем на Балтийской, Акцизной, Пулковской, Санкт-Петербургской, Шереметьевской, Сибирской, Новороссийской, Белгородской, Ростовской и Владивостокской таможнях.",
+    "p3": "Мы пользуемся в Северо-Западном округе наибольшим авторитетом и доверием клиентов. К нам за помощью обращаются различные организации, занимающиеся внешнеэкономической деятельностью:",
+    "b": "юридические лица, коммерческие структуры, государственные предприятия.",
+    "p4": "Все дочерние компании ГК «Балткомплект» аккредитованы, а также ООО «Транслогистик» внесена в реестр таможенных представителей Российской Федерации.\nНомер регистрации в реестре таможенных представителей: 1494",
+    "p5": "В 2003 г. «Балткомплект» получил статус Действительного члена Региональной Ассоциации таможенных представителей «Северо-Запад».",
+    "p6": "А с ноября 2010 года вошел в состав «Гильдии профессиональных участников рынка оказания услуг в области таможенного дела и внешнеэкономической деятельности \"ГЕРМЕС\"»."
+  }
+}

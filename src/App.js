@@ -1,9 +1,8 @@
-import React, {createContext} from 'react'
+import React, {createContext, Suspense} from 'react'
 import AppRouter from "./components/AppRouter";
 import {BrowserRouter} from "react-router-dom";
 import {ContextProvider} from "./context";
 import {observer} from "mobx-react-lite";
-import {hydrate} from "react-dom";
 import UserStore from "./store/UserStore";
 import BlogStore from "./store/BlogStore";
 
@@ -16,7 +15,9 @@ const App = observer(() => {
         }} >
         <BrowserRouter>
             <ContextProvider>
-                <AppRouter />
+                <Suspense fallback={'Load...'}>
+                    <AppRouter />
+                </Suspense>
             </ContextProvider>
         </BrowserRouter>
     </Context.Provider>

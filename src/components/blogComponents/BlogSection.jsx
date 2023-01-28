@@ -1,8 +1,11 @@
 import {Link} from "react-router-dom";
+import {BlogLinkGroup} from "./BlogLinkGroup";
 
-function BlogSection() {
+function BlogSection({location}) {
 
     return <>
+        <div className="blog__bg">
+            {!location.pathname.includes( 'blog') ? <BlogLinkGroup blogPage={"Блог"}/> : <></>}
             <section className="blog__section">
                 <div className="container">
                     <div className="flex-container">
@@ -52,7 +55,8 @@ function BlogSection() {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
+    </>
 }
 
 export {BlogSection}

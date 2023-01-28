@@ -10,7 +10,7 @@
   img{
     width: 30px;
   }
-  .content{
+  .material-content{
     flex: 0 0 70%;
   }
   button{
@@ -26,7 +26,7 @@
     padding: 16px;
     flex-direction: column;
     margin: 4% auto !important;
-    .content{
+    .material-content{
       padding: 0;
       text-align: center;
       p{

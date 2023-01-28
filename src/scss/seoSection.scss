@@ -1,0 +1,166 @@
+.seo-section{
+  .container{
+    background: url("../img/earth.svg") no-repeat right;
+    .flex-container {
+      padding: 17% 0;
+      justify-content: space-between;
+      align-items: flex-start;
+      .seo-left{
+        flex: 0 0 60%;
+        p{margin-top: 24px;}
+        .btn__custom{
+          display: flex;
+          width: fit-content;
+          background: rgba(21, 102, 165, 0.05);
+          border: 1px solid #1566A5;
+          border-radius: 4px;
+          cursor: pointer;
+          height: auto;
+          align-items: center;
+          gap: 12px;
+          .text{
+            p {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              margin: 0 ;
+              color: $dark;
+            }
+            span{
+              font-style: normal;
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 16px;
+              color: $lightgray;
+            }
+          }
+        }
+      }
+      .seo-right{
+        flex: 0 0 40%;
+        display: flex;
+        justify-content: flex-end;
+       .seo-right__item{
+         flex: 0 0 60%;
+         background-color: $white;
+         @include block-style;
+         padding: 24px 40px;
+         li{
+           font-weight: 400;
+           font-size: 12px;
+           line-height: 24px;
+           margin-left: 2%;
+         }
+         p{margin-top: 16px;}
+         .btn{font-weight: 600;}
+         h3{
+           font-weight: 600;
+           font-size: 24px;
+           line-height: 24px;
+           color: $dark;
+         }
+       }
+      }
+    }
+  }
+}
+
+// responsive///////////////////////////////////////////////////////////////////
+
+@media (max-width: 1484px) {
+  .seo-right__item{
+    h3{font-size: 16px!important;}
+  }
+}
+
+@media (max-width: 1484px) and (min-width: 1024.1px) {
+  .seo-section{
+    .container{
+     background-position: center;
+      .flex-container {
+        .seo-right{
+          .seo-right__item{
+            flex: 0 0 70%;
+            padding: 16px;
+            .btn{font-weight: 600; padding: 12px 16px;font-size: 14px;height: 40px}
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) and (min-width: 992.1px) {
+  .seo-section{
+    .container{
+      background-position: center;
+      background-size: contain;
+
+      .flex-container {
+        .seo-left{flex: 0 0 65%;}
+        .seo-right{
+          flex: 0 0 35%;
+          .seo-right__item{
+            flex: 0 0 90%;
+            padding: 16px;
+            li{
+              font-size: 12px;
+              line-height: 16px;
+            }
+            p{
+              margin-top: 8px;
+              font-size: 12px;
+              line-height: 16px;
+            }
+            .btn{font-weight: 600; padding: 12px 16px;font-size: 14px;height: 40px}
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .seo-section{
+    .container{
+      background-position: center;
+      background-size: contain;
+      .flex-container {
+        .seo-left{flex: 0 0 62%;}
+        .seo-right{
+          flex: 0 0 38%;
+          .seo-right__item{
+            flex: 0 0 90%;
+            padding: 16px;
+            li{
+              font-size: 12px;
+              line-height: 16px;
+            }
+            p{
+              margin-top: 8px;
+              font-size: 12px;
+              line-height: 16px;
+            }
+            .btn{font-weight: 600; padding: 12px 16px;font-size: 14px;height: 40px}
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .seo-section {
+    .container {
+      .flex-container {
+        padding-left: 16px;
+        padding-right: 16px;
+        .seo-left {
+          flex: 0 0 100%;
+        }
+
+        .seo-right {
+          display: none;
+        }
+      }
+    }
+  }
+}

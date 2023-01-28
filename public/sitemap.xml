@@ -5,36 +5,215 @@
         <loc>https://baltkomplekt.ru/</loc>
     </url>
     <url>
-        <loc>https://baltkomplekt.ru/services/custom-clearance</loc>
+        <loc>https://baltkomplekt.ru/services/custom-clearance/</loc>
     </url>
     <url>
-        <loc>https://baltkomplekt.ru/services/transport-services</loc>
+        <loc>https://baltkomplekt.ru/services/transport-services/</loc>
     </url>
     <url>
-        <loc>https://baltkomplekt.ru/services/ved</loc>
+        <loc>https://baltkomplekt.ru/services/transport-services/air-shipping/</loc>
+    </url>
+
+    <url>
+        <loc>https://baltkomplekt.ru/services/transport-services/railway-shipping/</loc>
     </url>
     <url>
-        <loc>https://baltkomplekt.ru/services/solutions</loc>
+        <loc>https://baltkomplekt.ru/services/transport-services/road-shipping/</loc>
     </url>
     <url>
-        <loc>https://baltkomplekt.ru/about</loc>
+        <loc>https://baltkomplekt.ru/services/transport-services/multimodal-shipping/</loc>
     </url>
     <url>
-        <loc>https://baltkomplekt.ru/contacts</loc>
+        <loc>https://baltkomplekt.ru/services/transport-services/danger-shipping/</loc>
     </url>
     <url>
-        <loc>https://baltkomplekt.ru/blog</loc>
+        <loc>https://baltkomplekt.ru/services/transport-services/sea-shipping/</loc>
     </url>
     <url>
-        <loc>https://baltkomplekt.ru/blog/materials</loc>
+        <loc>https://baltkomplekt.ru/services/transport-services/air-shipping/</loc>
+    </url>
+
+    <url>
+        <loc>https://baltkomplekt.ru/services/ved/</loc>
     </url>
     <url>
-        <loc>https://baltkomplekt.ru/blog/cases</loc>
+        <loc>https://baltkomplekt.ru/services/solutions/</loc>
     </url>
     <url>
-        <loc>https://baltkomplekt.ru/blog/news</loc>
+        <loc>https://baltkomplekt.ru/about/</loc>
     </url>
     <url>
-        <loc>https://baltkomplekt.ru/blog/faq</loc>
+        <loc>https://baltkomplekt.ru/contacts/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/blog/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/blog/materials/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/blog/cases/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/blog/news/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/blog/faq/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Eu/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Tu/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/In/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Us/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Cn/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Ge/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Uk/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Sp/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/It/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/La/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Li/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Fi/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Sw/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Es/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Se/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Fr/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Au/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Al/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/An/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Be/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Bg/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Hu/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Gr/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/De/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Sl/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Ie/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/No/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Ne/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Po/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Pg/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Sv/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Cr/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Mo/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Ro/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Cz/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Sz/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Is/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Ar/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Ur/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Pe/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/C/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Ec/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Br/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Cl/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Eg/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Ke/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Sa/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Ml/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Mc/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Pa/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Az/</loc>
+    </url>
+    <url>
+        <loc>https://baltkomplekt.ru/countries/Ir/</loc>
     </url>
 </urlset>

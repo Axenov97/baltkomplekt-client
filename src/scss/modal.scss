@@ -1,12 +1,12 @@
-  .modal-overlay {
+.modal-overlay {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: fixed;
     top: 0;
@@ -18,7 +18,7 @@
     opacity: 0;
     visibility: hidden;
     -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
     -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
     transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
     &.active {
@@ -32,27 +32,31 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: absolute;
   margin: 0 auto;
-  background-color: #fff;
   min-height: 20rem;
   padding: 4rem;
   opacity: 0;
   overflow: hidden;
   visibility: hidden;
-  box-shadow: 0px 4px 40px rgba(57, 147, 232, 0.2);
+  background: $dark;
+  box-shadow: 0 20px 64px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  
+  backface-visibility: hidden;
+
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+
+  -webkit-transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
   .close-modal {
     position: absolute;
     top: 5%;
@@ -66,18 +70,14 @@
     opacity: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-    -webkit-transition-delay: 0.3s;
-    transition-delay: 0.3s;
     display: none;
   }
   
   &.active {
     visibility: visible;
     opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     
     .modal-content {
       opacity: 1;
@@ -91,17 +91,30 @@
   display: flex;
   flex-wrap: wrap;
 }
-
+.modal-text, .modal-callback{
+  .alarms{
+    width: 100%;
+    .alarm{
+      justify-content: flex-start;
+      flex: 0 0 100%;
+      padding: 0;
+      background: none;
+      border: none;
+      &:before{
+        margin-right: 8px;
+      }
+    }
+  }
+}
 .modal-content{
   h3{
     flex: 100% 0 0;
     font-style: normal;
     font-weight: 500;
-    @include adaptiv-font(36, 12);
-    line-height: 36px;
-    text-transform: uppercase;
-    color: $blue;
-    margin:4rem 0 0 4rem;
+    font-size: 24px;
+    line-height: 24px;
+    color: $white;
+    //margin:4rem 0 0 4rem;
   }
 }
 
@@ -112,18 +125,6 @@
 
   .form-start__content{
     margin-top: 2%;
-    padding: 4%;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-    .preText{
-      font-style: normal;
-      font-weight: normal;
-      @include adaptiv-font(16, 12);
-      line-height: 24px;
-      color: $dark;
-      text-transform: uppercase;
-    }
     .errorText{
       font-style: normal;
       font-weight: normal;
@@ -133,31 +134,29 @@
     }
     input, textarea{
       font-weight: normal;
-      @include adaptiv-font(16, 12);
+      font-size: 16px;
       line-height: 24px;
-      color: $dark;
-      border: 2px solid #EEEEEE;
-      border-radius: 6px;
+      color: $white;
+      border: 1px solid $lightgray;
+      border-radius: 4px;
+      background: transparent;
+      padding: 16px;
       width: 100%;
-      padding: 2%;
-      margin-top: 0;
-      margin-bottom: 1%;
-      &::placeholder{text-transform: uppercase;}
+      margin-bottom: 16px;
     }
+
     textarea{height: 200px;}
   }
-  .btn{
-    @extend %btn;
-    width: 50%;
-    margin-top: 3%;
-  }
   .btn__after_text{
-    margin-top:1%;
-    font-weight: normal;
-    @include adaptiv-font(11, 9);
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 12px;
     line-height: 12px;
     letter-spacing: -0.02em;
-    color: $dark;
+    color: $lightgray;
+    span{
+      width: 100%;
+    }
   }
 }
 
@@ -170,29 +169,21 @@
 
 //modal callback
 #modal-callback{
-   padding: 0;
-   width: 60%;
+   padding: 16px;
+   max-width: 343px;
 }
 #modal-text, #modal-calculate{
-  width: 60%;
+ max-width: 912px;
 }
 .modal-callback{
   justify-content: space-between;
-
-    .tablet-bg{
-      display: none;
-    }
-    .callback__bg{
-      display: flex;
-      img{
-        width: 100%;
-        align-self: flex-end; 
-      }
-   }
-   
+  .form-start {
+    flex: 0 0 100%;
+    margin: 0 !important;
+    padding: 0!important;
+  }
   .btn{
-    color: $white;
-    background-color: $red;
+    width: 100%;
   }
 }
 
@@ -245,9 +236,9 @@
   }
 }
 
-  //modal text
 
-.modal-text{  
+//modal text
+.modal-text{
   .modal-text__bg{
     position: absolute;
     left:0;
@@ -261,13 +252,26 @@
     flex: 65% 0 0; 
   }
 
-  .btn{
-    color: $white;
-    background-color: $blue;
-  }
   .modal-text__content{
     margin-top: 2%;
     flex: 30% 0 0;
+    h2{
+      color: $lightgray;
+      font-size: 16px;
+      line-height: 16px;
+      display: inline-flex;
+
+      &:before{
+        content: url("../img/modal/info.svg");
+        margin-right: 8px;
+      }
+    }
+    p{
+      color: #798A97;
+      margin-top: 24px;
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 }
 
