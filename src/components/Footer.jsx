@@ -28,7 +28,7 @@ function Footer() {
                 }
             }
         } catch (error) {
-            console.error(error)
+            // console.error(error)
         }
     }
 
@@ -37,47 +37,32 @@ function Footer() {
             <div className="footer__content_top flex-container">
                 <h2 className="blue__head">Контакты</h2>
                 <div className="footer_download">
-                    <a href={price} className="text a_btn" target="_blank">
+                    <a href={price} className="text a_btn btn__black_border" target="_blank">
                         <img src={iconPrice}  alt='download'/>
-                            <p>Скачать прайс</p>
+                        <p>Скачать прайс</p>
                     </a>
                     <a href={dogovor} className="text a_btn" target="_blank">
                         <img src={iconDogovor} alt='download'/>
-                            <p>Скачать брокерский договор</p>
+                        <p>Скачать брокерский договор</p>
                     </a>
                 </div>
             </div>
-            <div className="grid-container">
+            <div className="flex-container top-contacts__container">
                 <div className="contacts contacts_spb">
-                    <h4>Центральный офис в <br /> Санкт-Петербурге</h4>
+                    <h4>Центральный офис в Санкт-Петербурге</h4>
                     <p>
-                        <b>Телефон / факс в СПб:</b><br />
+                        <span>Телефон / факс в СПб:</span><br />
                         <a href="tel:8(812)718-69-70">8(812)718-69-70</a><br />
                         <a href="tel:8(812) 718-69-71">8(812) 718-69-71</a>
                     </p>
                     <p>
-                        <b>Адрес:</b><br />
-                        <p style={{padding: 0}}>198035, Санкт-Петербург, Двинская ул., д. 10, кор. 3</p>
+                        <span>Адрес:</span><br />
+                        <p style={{padding: 0, margin: 0}}>198035, Санкт-Петербург, Двинская ул., д. 10, кор. 3</p>
                     </p>
-
                     <p>
-                        <b>Email:</b><br />
-                        Клиентам: <a href="mailto:info@baltkomplekt.ru"><b>info@baltkomplekt.ru</b></a><br />
-                        Перевозки: <a href="mailto:logist@baltkomplekt.ru"><b>logist@baltkomplekt.ru</b></a>
-                    </p>
-                </div>
-                <div className="contacts contacts_moscow">
-                    <h4>Москва</h4>
-                    <p>
-                        <b>Телефон / факс в Москве:</b><br />
-                        <a href="tel:8(495) 975-93-73">8(495) 975-93-73</a>
-                    </p>
-                </div>
-                <div className="contacts contacts_novoros">
-                    <h4>Новоросийск</h4>
-                    <p>
-                        <b>Телефон / факс в Новороссийске:</b><br />
-                        <a href="tel:8 (800) 775-47-94">8 (800) 775-47-94</a>
+                        <span>Email:</span><br />
+                        Клиентам: <a href="mailto:info@baltkomplekt.ru">info@baltkomplekt.ru</a><br />
+                        Перевозки: <a href="mailto:logist@baltkomplekt.ru">logist@baltkomplekt.ru</a>
                     </p>
                 </div>
                 <div className="map">
@@ -85,11 +70,31 @@ function Footer() {
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4757.893600576084!2d30.24746903644106!3d59.908114675973266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630bdce72efa3%3A0x24617bd4723e938f!2z0KLQsNC80L7QttC10L3QvdGL0Lkg0LHRgNC-0LrQtdGAIMKr0JHQsNC70YLQutC-0LzQv9C70LXQutGCwrs!5e0!3m2!1sru!2sru!4v1615546508892!5m2!1sru!2sru"
                         width="100%" height="350" style={{border:0}} allowFullScreen="" loading="lazy" title="Map"/>
                 </div>
-                <div className="footer__callback flex-container">
-                    <div className="footer__callback_name">
-                        <h4>Бесплатно по России</h4>
+            </div>
+            <div className="flex-container bottom-contacts__container">
+                <div className="contacts contacts_moscow">
+                    <h4>Москва</h4>
+                    <p>
+                        <span>Телефон / факс:</span><br />
+                        <a href="tel:8(495) 975-93-73">8(495) 975-93-73</a>
+                    </p>
+                </div>
+                <div className="contacts contacts_novoros">
+                    <h4>Новоросийск</h4>
+                    <p>
+                        <span>Телефон / факс:</span><br />
+                        <a href="tel:8 (800) 775-47-94">8 (800) 775-47-94</a>
+                    </p>
+                </div>
+                <div className="contacts contacts_rf">
+                    <h4>Бесплатно по РФ</h4>
+                    <p>
+                        <span>Телефон:</span><br />
                         <a href="tel:8 800 775-47-94">8 800 775-47-94</a>
-                    </div>
+                    </p>
+                </div>
+                <div className="contacts contacts_callback">
+                    <h4>Мы Вам перезвоним</h4>
                     <form>
                         <input type="hidden" name="project_name" value="Балткомплект" />
                         <input type="hidden" name="admin_email" value="info@baltkomplekt.ru" />
@@ -105,10 +110,11 @@ function Footer() {
                             onChange={e => phoneHandler(e)}
                         />
                         <button
+                            className='btn btn__black_border'
                             disabled={content.phone.length <= 5}
                             onClick={sendHandler}
                         >
-                            Перезвонить
+                            Перезвоните мне
                         </button>
                     </form>
                 </div>

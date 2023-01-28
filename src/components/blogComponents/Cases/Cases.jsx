@@ -10,6 +10,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 const Cases = observer(() =>{
     const {blog} = useContext(Context)
     const [loading, setLoading] = useState(true)
+    const [prevOpenCase, setPrevOpenCase] = useState('')
 
     useEffect(() => {
         fetchCases().then(data=> {
@@ -34,7 +35,7 @@ const Cases = observer(() =>{
         />
         <div className='cases-list'>
             {blog.itemCases.map(itemCases =>
-                <Case key={itemCases.id} {...itemCases}/>
+                <Case key={itemCases.id} {...itemCases} prevOpenCase={prevOpenCase} setPrevOpenCase={setPrevOpenCase} />
             )}
         </div>
     </>

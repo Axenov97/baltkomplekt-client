@@ -1,20 +1,25 @@
 import {ModalContext} from "../../context";
-import {useContext, useState} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import price from '../../upload/baltkomplekt-price.xlsx'
 import {sendYandexMetrik} from "../../utils/metriks";
 
-function PriceSection(){
+function PriceSection({isPrice, priceRef}){
     const {openModal} = useContext(ModalContext)
     const [tbodyToggle, setTbodyToggle] = useState(false)
     function handlePrice() {
         setTbodyToggle(!tbodyToggle)
         const price = document.querySelector('.price');
-        price.scrollIntoView({behavior: 'smooth'}, 500)
+        price.scrollIntoView({behavior: 'smooth', block:'start'}, 500)
     }
+    useEffect(()=>{
+        if (isPrice) {
+            priceRef.current.scrollIntoView({behavior: 'smooth'}, 500)
+        }
+    },[isPrice])
     return (
-        <section className="price">
+        <section className="price" ref={priceRef}>
             <div className="container">
-                <h2 className="blue__head">Цены</h2>
+                <h2 style={{textAlign:'center'}}>Цены</h2>
                 <div className="table">
                     <table className="serv-table">
                         <tbody className={tbodyToggle ? 'show' : 'hide'}>
@@ -213,10 +218,10 @@ function PriceSection(){
                         >
                             {tbodyToggle ? 'Скрыть' : 'Развернуть'}
                         </button>
-                        <a href={price} target="_blank" rel="noreferrer" className="btn__left">Скачать прайс</a>
+                        <a href={price} target="_blank" rel="noreferrer" className="btn__left a_btn btn__black_border">Скачать прайс</a>
                         <div className="btn__right">
                             <button id="_modal-calculate" className="btn" onClick={()=>openModal('modal-text')}>Рассчитать перевозку</button>
-                            <button id="_modal-text" className="btn" onClick={()=>{
+                            <button id="_modal-text" className="btn btn__blue" onClick={()=>{
                                 openModal('modal-text')
                                 sendYandexMetrik('reachGoal','ButtonZayavka')}
                             }>Оставить заявку</button>

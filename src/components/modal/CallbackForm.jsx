@@ -1,6 +1,6 @@
-import bg from "../../img/modal/callback/bg.svg"
-import tablet_bg from "../../img/modal/callback/tablet_bg.svg"
-import {useContext, useEffect, useState} from "react";
+// import bg from "../../img/modal/callback/bg.svg"
+// import tablet_bg from "../../img/modal/callback/tablet_bg.svg"
+import React, {useContext, useEffect, useState} from "react";
 import {ModalContext} from "../../context";
 import {sendMail} from "../../http/SendMailAPI";
 
@@ -36,7 +36,7 @@ function CallbackForm() {
                 await sendMail(content.name, '', content.phone, content.text, 'Перезвонить')
             }
         } catch (error) {
-            console.error(error)
+            // console.error(error)
         }
         closeModal(form)
     }
@@ -52,12 +52,11 @@ function CallbackForm() {
     },[error.name, error.phone])
 
     return <div className={form === 'modal-callback' ? "modal-content modal-callback active" : "modal-content modal-callback"}>
-        <h3>Персональная консультация</h3>
-        <div className="tablet-bg">
-            <img src={tablet_bg} alt='балткомплект' />
-        </div>
-        <div className="callback__bg">
-            <img src={bg} alt='балткомплект'/>
+        <h3>Перезвоните мне</h3>
+        <div className="alarms">
+            <div className='alarm'>
+                <p>Только юридические лица</p>
+            </div>
         </div>
         <form className="form-start">
             <div className="form-start__content">
@@ -65,14 +64,14 @@ function CallbackForm() {
                     {dirtyName && error.name ?
                         <span className="errorText">Поле ИМЯ обязательно к заполнению</span>
                         :
-                        <span className="preText">Имя</span>
+                        null
                     }
                     <input
                         style={dirtyName && error.name ? {border: '1px solid #ff000055'} : null}
                         type="text"
                         className="form-control-start"
                         name="Имя"
-                        placeholder="Василий"
+                        placeholder="Имя"
                         value={content.name}
                         onBlur={e => blurHandler(e)}
                         onChange={e => nameHandler(e)}
@@ -80,7 +79,7 @@ function CallbackForm() {
                     {dirtyPhone && error.phone ?
                         <span className="errorText">Поле Телефон обязательно к заполнению</span>
                         :
-                        <span className="preText">Телефон</span>
+                        null
                     }
                     <input
                         style={dirtyPhone && error.phone ? {border: '1px solid #ff000055'} : null}
@@ -88,21 +87,11 @@ function CallbackForm() {
                         data-tel-input={true}
                         className="form-control-start phone-input"
                         name="Телефон"
-                        placeholder="+7 (812) 999 99-99"
+                        placeholder="Телефон"
                         maxLength="18"
                         value={content.phone}
                         onBlur={e => blurHandler(e)}
                         onChange={e => phoneHandler(e)}
-                    />
-
-                    <span className="preText">Ваш запрос</span>
-                    <textarea
-                        type="text"
-                        className="form-control-start"
-                        name="Сообщение"
-                        placeholder="Пожалуйста, подробно опишите ваш запрос"
-                        value={content.text}
-                        onChange={e => setFormContent({...content, text: e.target.value})}
                     />
                 </div>
             </div>
@@ -115,7 +104,7 @@ function CallbackForm() {
                 Перезвонить
             </button>
             <div className="btn__after_text">
-                <span>Нажимая нопку “Оставить заявку”, вы соглашаетесь<br/> с политикой конфиденциальности</span>
+                <span>Нажимая нопку “Оставить заявку”, вы соглашаетесь с политикой конфиденциальности</span>
             </div>
         </form>
     </div>

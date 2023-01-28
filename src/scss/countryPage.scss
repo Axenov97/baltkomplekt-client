@@ -1,0 +1,58 @@
+@import "nullstyles";
+.country-page{
+  padding: 10% 2% 0;
+  .flex-container{
+    .title{
+      margin-left: 2%;
+      h1{
+        @include adaptiv-font(48, 20);
+        font-weight: bold;
+        color: $blue;
+        margin-bottom: 3%;
+      }
+      h2{
+        @include adaptiv-font(32, 16);
+        font-weight: bold;
+        margin-bottom: 3%;
+      }
+    }
+  }
+  .country-page__description{
+    margin-top: 5%;
+    h4{
+      @include adaptiv-font(24, 16);
+      font-weight: bold;
+      margin-bottom: 2%;
+    }
+    p{
+      @include adaptiv-font(16,12);
+      margin-top: 2%;
+    }
+    ul{
+      li{
+        @include adaptiv-font(16, 12);
+        list-style: disc;
+        text-decoration: underline;
+        margin-left: 20px;
+        margin-top: 1%;
+      }
+    }
+  }
+}
+
+@media(max-width: 900px) {
+  .country-page {
+    padding: 10% 2%;
+    .flex-container {
+      align-items: flex-start ;
+
+      img{
+        width: 30%;
+        height: auto;
+      }
+      .title{
+
+      }
+    }
+  }
+}

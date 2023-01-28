@@ -1,0 +1,17 @@
+<svg width="107" height="80" viewBox="0 0 107 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_908_6091" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="107" height="80">
+<rect width="106.667" height="80" fill="white"/>
+</mask>
+<g mask="url(#mask0_908_6091)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V80H106.667V0H0Z" fill="#F7FCFF"/>
+<mask id="mask1_908_6091" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="107" height="80">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V80H106.667V0H0Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_908_6091)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V26.6667H106.667V0H0Z" fill="#58A5FF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 53.333V79.9997H106.667V53.333H0Z" fill="#58A5FF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M55.1758 48.2905C55.1758 48.2905 51.7695 55.3529 48.7757 56.8009C50.0679 53.5617 50.5436 46.9525 50.5436 46.9525C50.5436 46.9525 42.7705 50.0343 40.0423 49.4727C43.3229 47.1802 47.8765 42.9341 47.8765 42.9341C47.8765 42.9341 37.8157 39.645 38.0626 38.2452C42.6041 39.0599 48.8499 38.1718 48.8499 38.1718C48.8499 38.1718 41.7919 29.7076 42.5076 29.0782C43.5835 30.1239 52.042 34.5423 52.042 34.5423C52.042 34.5423 52.6557 27.0117 54.476 24.4727C54.6944 26.2649 57.2494 34.3795 57.2494 34.3795C57.2494 34.3795 62.3856 29.2402 65.2364 29.2402C63.9842 30.7928 61.0193 37.6126 61.0193 37.6126C61.0193 37.6126 68.4086 37.4963 71.2177 38.8793C67.8147 39.3633 61.8529 42.3564 61.8529 42.3564C61.8529 42.3564 69.6177 48.2465 68.9098 49.4727C64.7408 47.4333 59.921 46.7502 59.921 46.7502C59.921 46.7502 61.2532 54.9471 60.1763 56.8009C59.1261 54.0722 55.1758 48.2905 55.1758 48.2905Z" fill="#FFD018" stroke="#F19900" stroke-opacity="0.98" stroke-width="0.25"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M54.7298 44.4723C56.5708 44.4723 58.0631 42.9799 58.0631 41.139C58.0631 39.298 56.5708 37.8057 54.7298 37.8057C52.8889 37.8057 51.3965 39.298 51.3965 41.139C51.3965 42.9799 52.8889 44.4723 54.7298 44.4723Z" fill="#FFD018" stroke="#F19900" stroke-opacity="0.98" stroke-width="0.25"/>
+</g>
+</g>
+</svg>

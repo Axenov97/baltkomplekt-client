@@ -16,7 +16,6 @@
 			font-family: Montserrat!important;	
 			font-weight: normal!important;
 			.wp-btn{
-				@extend %btn;
 				font-style: normal!important;
 				font-weight: 600!important;
 				@include adaptiv-font(14, 11);

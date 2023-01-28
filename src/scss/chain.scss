@@ -1,0 +1,198 @@
+.chain{
+  background-color: $dark;
+  padding: 6% 0 3%;
+  .bg-img{
+    height: 100%;
+    background: url("./../img/gerb.svg") center / 50% no-repeat;
+    h2{
+      text-align: center;
+      font-style: normal;
+      font-weight: 700;
+      @include adaptiv-font(24, 16);
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: $white;
+    }
+    h3{
+      text-align: center;
+      font-style: normal;
+      font-weight: 400;
+      @include adaptiv-font(24, 16);
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: $lightgray;
+      margin-top: 1%;
+    }
+    .chain__models{
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-between;
+      .chain__models_model{
+        flex: 0 0 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        h5{
+          font-style: normal;
+          font-weight: 600;
+          @include adaptiv-font(16, 12);
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          color: #CAD5DD;
+          margin-bottom: 16px;
+        }
+        .model__link-group{
+          width: 80%;
+          padding: 12px;
+          border: 2px solid #1566A5;
+          border-radius: 4px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          .model__link{width: 100%;}
+        }
+        .model__link {
+          width: 70%;
+          background: rgba(21, 102, 165, 0.15);
+          border: 1px solid #1566A5;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          padding: 12px;
+          justify-content: flex-start;
+          gap: 16px;
+          &.big-width{
+            width: 88%;
+          }
+          &.middle-width{
+            width: 84%;
+          }
+          p{
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiv-font(14, 12);
+            line-height: 20px;
+            color: $white;
+          }
+          li{
+            margin-top: 4px;
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiv-font(12, 10);
+            line-height: 16px;
+            color: #9FB3C4;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1484px) {
+  .chain {
+    .bg-img {
+      .chain__models {
+        .chain__models_model {
+          .model__link-group {
+            width: 92%;
+            .model__link {
+              width: 100%;
+            }
+          }
+          .model__link {
+            flex-direction: column;
+            width: 92%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 992px) and (min-width: 768.1px){
+  .chain {
+    .bg-img {
+      .chain__models {
+        flex-wrap: wrap;
+        .chain__models_model {
+          flex: 0 0 33%;
+          .model__link {
+            width: 88%;
+            //flex-direction: row;
+          }
+          &:nth-child(4){
+            margin-top: 40px;
+            flex: 0 0 100%;
+            .model__link-group {
+              flex-direction: row;
+              width: 100%;
+              .model__link {
+                width: 100%;
+                flex-direction: row;
+              }
+            }
+            .model__link {
+              width: 44%;
+              flex-direction: row;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 768px)  and (min-width: 600px){
+  .chain {
+    .bg-img {
+      .chain__models {
+        flex-wrap: wrap;
+        .chain__models_model {
+          flex: 0 0 50%;
+          margin-top: 20px;
+
+          .model__link {
+            width: 88%;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 599.99px) {
+  .chain {
+    .bg-img {
+      background-repeat: repeat-y;
+      .chain__models {
+        flex-wrap: wrap;
+        .chain__models_model {
+          flex: 0 0 100%;
+          margin-top: 20px;
+          gap: 12px;
+
+          h5{margin-bottom: 0;
+            margin-top: 12px;}
+          .arrow{display: none}
+
+          .model__link {
+            width: 90%;
+            flex-direction: row;
+            &.big-width{
+              width: 90%;
+            }
+            &.middle-width{
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

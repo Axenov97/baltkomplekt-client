@@ -1,25 +1,11 @@
 import React, {useEffect} from 'react'
-
-import {AboutUsSection} from "../components/sections/AboutUsSection";
-import {FirstSection} from "../components/sections/FirstSection";
-import {PriceSection} from "../components/sections/PriceSection";
 import {BlogSection} from "../components/blogComponents/BlogSection";
 import {StrengthSection} from "../components/sections/StrengthSection";
-import {ServicesSection} from "../components/sections/ServicesSection";
-import {StuffSection} from "../components/sections/StuffSection";
-import {BlogLinkGroup} from "../components/blogComponents/BlogLinkGroup";
-import {HockeySection} from "../components/sections/HockeySection";
 import {ClientsSection} from "../components/sections/ClientsSection";
 import {Helmet} from "react-helmet";
-import AuditSection from "../components/sections/AuditSection";
+import {HomeSection} from "../components/sections/HomeSection";
 
-
-
-function Home({auditButtonDisable, setAuditButtonDisable}) {
-
-    useEffect(()=>{
-        setAuditButtonDisable(true)
-    },[])
+function Home({setIsPrice, location}) {
 
     useEffect(() => {
         const body = document.querySelector('#root');
@@ -29,21 +15,16 @@ function Home({auditButtonDisable, setAuditButtonDisable}) {
     return <>
             <Helmet >
                 <html lang="ru" />
-                <title>Балткомплект - таможенный брокер для юридических лиц. Стоимость услуг таможенного брокера в СПб, Москве и по всей России</title>
-                <meta name='description' content="Таможенный брокер Балткомплект - самый надежный и проверенный представитель на рынке таможенного оформления грузов и товаров. Балткомплект однозначно лучший таможенный брокер в Санкт-Петербурге и по всей России!"/>
+                <title>Балткомплект | Таможенный брокер СПб | Таможенное оформление по всей России</title>
+                <meta name='description' content='Таможенный брокер Балткомплект является одним из самых проверенных
+                 представителей на рынке таможенного оформления грузов и товаров. Балткомплект лучший таможенный представитель в сфере таможни!'/>
+                <link rel="canonical" href="/" />
             </Helmet>
 
-        <FirstSection />
-        <AuditSection auditButtonDisable={auditButtonDisable}/>
-        <AboutUsSection />
-        <ClientsSection />
+        <HomeSection setIsPrice={setIsPrice}/>
         <StrengthSection />
-        <ServicesSection />
-        <StuffSection />
-        <PriceSection />
-        <BlogLinkGroup />
-        <BlogSection />
-        <HockeySection />
+        <ClientsSection />
+        <BlogSection location={location}/>
     </>
 }
 

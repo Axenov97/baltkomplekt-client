@@ -1,16 +1,17 @@
 .clients{
+	background-color: transparent;
+	margin-top: 0;
 	.container{
 		position: relative;
 		h2{
 			text-align: center;
-			padding-top: 40px;
+			padding-top: 4%;
 		}
 	}
 	.clients__swiper{
-		margin-top: 3%;
-		padding: 5%;
+		padding: 0 5% 3%;
+		margin-top: 4%;
 		height: auto;
-		@include block-style;
 		.swiper-wrapper{
 			align-items: center;
 			.client{

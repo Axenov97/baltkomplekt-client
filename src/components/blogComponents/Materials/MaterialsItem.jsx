@@ -9,7 +9,7 @@ function MaterialsItem({title, description, document}) {
 
     return <div className='materials-container container flex-container'>
         <img src={documentIcon} alt='icon'/>
-        <div className="content">
+        <div className="material-content">
             <h2>{title}</h2>
             <p>{description}</p>
         </div>

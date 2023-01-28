@@ -77,8 +77,8 @@ function ClientsSection(){
                 <SwiperSlide className="client"><img src={razvitie} alt="Ингридиенты развитие"/></SwiperSlide>
                 <SwiperSlide className="client"><img src={aquatoria} alt="Акватория"/></SwiperSlide>
                 <SwiperSlide className="client"><img src={murmansk} alt="Мурманский тарный комбинат"/></SwiperSlide>
+                <div id="swiperPagination" className='swiper-dots'/>
             </Swiper>
-            <div id="swiperPagination" className='swiper-dots'/>
         </div>
     </section>
 }

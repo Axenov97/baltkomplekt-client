@@ -1,6 +1,6 @@
-import bg from "../../img/modal/modalText/bg.svg"
+// import bg from "../../img/modal/modalText/bg.svg"
 import {ModalContext} from "../../context";
-import {useContext, useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import {sendMail} from "../../http/SendMailAPI";
 
 function TextForm() {
@@ -44,7 +44,7 @@ function TextForm() {
                 await sendMail(content.name, content.email, content.phone, content.text, 'Оставить заявку')
             }
         } catch (error) {
-            console.error(error)
+            // console.error(error)
         }
         closeModal(form)
     }
@@ -60,9 +60,11 @@ function TextForm() {
     },[error.name, error.email, error.phone])
 
     return <div className={form === 'modal-text' ? "modal-content modal-text active" : "modal-content modal-text"}>
-        <h3>Оставьте заявку на расчет полной <br/> комплексной стоимости</h3>
-        <div className="modal-text__bg">
-            <img src={bg} alt='балткомплект'/>
+        <h3>Оставьте заявку на расчет полной комплексной стоимости</h3>
+        <div className="alarms">
+            <div className='alarm'>
+                <p>Только юридические лица</p>
+            </div>
         </div>
         <form className="form-start">
             <div className="form-start__content">
@@ -70,7 +72,7 @@ function TextForm() {
                     {dirtyName && error.name ?
                         <span className="errorText">Поле ИМЯ обязательно к заполнению</span>
                         :
-                        <span className="preText">Имя</span>
+                        null
                     }
                     <input
                         style={dirtyName && error.name ? {border: '1px solid #ff000055'} : null}
@@ -78,7 +80,7 @@ function TextForm() {
                         type="text"
                         className="form-control-start"
                         name="name"
-                        placeholder="Василий"
+                        placeholder="Имя"
                         value={content.name}
                         onBlur={e => blurHandler(e)}
                         onChange={e => nameHandler(e)}
@@ -86,7 +88,7 @@ function TextForm() {
                     {dirtyEmail && error.email ?
                         <span className="errorText">Поле Почта обязательно к заполнению</span>
                         :
-                        <span className="preText">Почта</span>
+                        null
                     }
                     <input
                         style={dirtyEmail && error.email ? {border: '1px solid #ff000055'} : null}
@@ -94,7 +96,7 @@ function TextForm() {
                         type="text"
                         className="form-control-start"
                         name="email"
-                        placeholder="Ваш почтовый адрес"
+                        placeholder="Почта"
                         value={content.email}
                         onBlur={e => blurHandler(e)}
                         onChange={e => emailHandler(e)}
@@ -102,7 +104,7 @@ function TextForm() {
                     {dirtyPhone && error.phone ?
                         <span className="errorText">Поле Телефон обязательно к заполнению</span>
                         :
-                        <span className="preText">Телефон</span>
+                        null
                     }
                     <input
                         style={dirtyPhone && error.phone ? {border: '1px solid #ff000055'} : null}
@@ -111,13 +113,12 @@ function TextForm() {
                         data-tel-input={true}
                         className="form-control-start"
                         name="phone"
-                        placeholder="+7 (812) 999-99-99"
+                        placeholder="Телефон"
                         maxLength="18"
                         value={content.phone}
                         onBlur={e => blurHandler(e)}
                         onChange={e => phoneHandler(e)}
                     />
-                    <span className="preText">Ваш запрос</span>
                     <textarea
                         required
                         type="text"
@@ -132,7 +133,7 @@ function TextForm() {
             <button
                 type="submit"
                 disabled={validate}
-                className="btn modal-btn"
+                className="btn modal-btn btn__white"
                 onClick={sendHandler}
             >
                 Оставить заявку

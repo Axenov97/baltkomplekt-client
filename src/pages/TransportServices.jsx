@@ -11,8 +11,10 @@ import {HockeySection} from "../components/sections/HockeySection";
 import {Helmet} from "react-helmet";
 import {ClientsSection} from "../components/sections/ClientsSection";
 import priceBg from "../img/priceBg.svg";
+import {StrengthSection} from "../components/sections/StrengthSection";
+import SEOTransportSection from "../components/sections/SEOTransportSection";
 
-function TransportServices() {
+function TransportServices({location}) {
 
     useEffect(() => {
         const body = document.querySelector('#root');
@@ -22,22 +24,21 @@ function TransportServices() {
     return <>
         <Helmet >
             <html lang="ru" />
-            <title>Балткомплект. Таможенное сопровождение и транспортные услуги для юридических лиц</title>
-            <meta name='description' content="Балткомплект предоставляет услуги по перевозке сложных и опасных грузов, а также международные грузоперевозки.
-            Через таможенного брокера Балткомплект Вы можете получить пакет услуг по таможенному оформлению и сопровождению товаров" />
+            <title>Балткомплект - Международные перевозки грузов и товаров, комплексные поставки грузов из Европы в Россию!</title>
+            <meta name='description' content="Международные перевозки товаров и грузов - наш приоритет! Также мы предоставляем услуги по перевозке сложных и опасных грузов.
+            Через таможенного брокера Балткомплект Вы можете получить пакет услуг по перевозке из-за рубежа, таможенному оформлению и сопровождению товаров, грузов или продуктов питания" />
+            <link rel="canonical" href="/services/transport-services/" />
         </Helmet>
 
         <FirstSection />
-        <img src={priceBg} className='price__bg' alt='балткомплект'/>
-        <ServicesSection />
+        <SEOTransportSection />
         <TransportSection />
         <AboutUsSection />
-        <ClientsSection />
-        <PriceSection />
-        <StuffSection />
-        <BlogLinkGroup />
-        <BlogSection />
         <HockeySection />
+        <StrengthSection />
+        <ServicesSection />
+        <ClientsSection />
+        <BlogSection location={location}/>
     </>
 }
 

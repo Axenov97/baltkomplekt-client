@@ -1,4 +1,4 @@
-import aboutImage from '../../img/about.webp'
+import aboutImage from '../../img/about.svg'
 import {useState} from 'react'
 
 function AboutUsSection(){

@@ -15,6 +15,7 @@ function Contacts() {
             <html lang="ru" />
             <title>Балткомплект - таможенный брокер из Санкт-Петербурга | Контактная информация</title>
             <meta name='description' content="Все контактные данные компании Балткомплект на одной странице"/>
+            <link rel="canonical" href="/contacts/" />
         </Helmet>
 
         <div className='contacts-container'>
