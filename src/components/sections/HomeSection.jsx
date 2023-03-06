@@ -100,7 +100,7 @@ function HomeSection({setIsScrollable}){
                                 </div>
                             </div>
                             <div className="links-block">
-                                <Link to='services/custom-clearance/' className='link-head'>Параллельный импорт</Link>
+                                <Link to='services/parallel-import/' className='link-head'>Параллельный импорт</Link>
                                 <div className="sublinks">
                                     <div className="sublinks-center">
                                         <a>Доставка товаров из стран Европы</a>
@@ -146,7 +146,7 @@ function HomeSection({setIsScrollable}){
                                 </div>
                             </div>
                             <div className="links-block">
-                                <Link to='services/custom-clearance/' className='link-head'>Финансовые услуги</Link>
+                                <Link to='services/financial-services/' className='link-head'>Финансовые услуги</Link>
                                 <div className="sublinks">
                                 <div className="sublinks-center">
                                     <a>Финансовое сопровождения сделок;</a>
