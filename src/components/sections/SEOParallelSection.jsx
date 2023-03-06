@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import SeoRight from "./SeoRight";
 import gerb from './../../img/mini-gerb.svg'
 
-const SEOParallelSection = () => {
+const SEOParallelSection = ({setIsScrollable}) => {
     const navigator = useNavigate()
 
     return (
@@ -43,8 +43,20 @@ const SEOParallelSection = () => {
                             разработанной нашей компанией для минимизации рисков, быстрой и эффективной доставке.
                         </p>
                         <p>Ознакомиться с основными схемами поставок можно по ссылке:</p>
-                        <button className='btn btn__black'>Смотреть схемы поставок</button>
-                        <button className='btn btn__black_border' onClick={()=>navigator('/contacts/')}>Связаться с нами</button>
+                        <button
+                            className='btn btn__black'
+                            onClick={()=>{
+                                setIsScrollable(true)
+                            }}
+                        >
+                            Смотреть схемы поставок
+                        </button>
+                        <button
+                            className='btn btn__black_border'
+                            onClick={()=>navigator('/contacts/')}
+                        >
+                            Связаться с нами
+                        </button>
                     </div>
                     <SeoRight />
                 </div>

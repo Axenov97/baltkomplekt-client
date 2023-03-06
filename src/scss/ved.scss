@@ -45,7 +45,7 @@
 //responsive
 
 @media (max-width:1024px) and (min-width: 768.1px) {
-	.ved{
+	.ved, .financial-services{
 		.ved__content{
 			.flex-container{
 				justify-content: space-around;
@@ -57,7 +57,7 @@
 	}
 }
 @media (max-width:768px) {
-	.ved{
+	.ved, .financial-services{
 		.ved__content{
 			padding: 16px;
 

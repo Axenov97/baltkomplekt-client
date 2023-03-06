@@ -5,7 +5,7 @@ import {ClientsSection} from "../components/sections/ClientsSection";
 import {Helmet} from "react-helmet";
 import {HomeSection} from "../components/sections/HomeSection";
 
-function Home({setIsPrice, location}) {
+function Home({setIsScrollable, location}) {
 
     useEffect(() => {
         const body = document.querySelector('#root');
@@ -21,7 +21,7 @@ function Home({setIsPrice, location}) {
                 <link rel="canonical" href="/" />
             </Helmet>
 
-        <HomeSection setIsPrice={setIsPrice}/>
+        <HomeSection setIsScrollable={setIsScrollable}/>
         <StrengthSection />
         <ClientsSection />
         <BlogSection location={location}/>

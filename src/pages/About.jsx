@@ -3,16 +3,16 @@ import {Helmet} from 'react-helmet';
 import video from './../video/video.mp4'
 import Accreditations from "../components/sections/Accreditations";
 
-function About({location}) {
+function About() {
 
     useEffect(() => {
         const body = document.querySelector('#root');
         body.scrollIntoView({behavior: 'smooth'}, 500)
     }, []);
 
-    const vidRef=useRef();
+    // const vidRef=useRef();
 
-    useEffect(() => { vidRef.current.play(); },[]);
+    // useEffect(() => { vidRef.current.play(); },[]);
 
     return <>
         <Helmet >
@@ -61,7 +61,7 @@ function About({location}) {
 
                             <video
                                 src={video}
-                                ref={ vidRef }
+                                // ref={ vidRef }
                                 muted
                                 autoPlay
                                 loop

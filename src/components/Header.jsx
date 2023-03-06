@@ -62,7 +62,7 @@ function Header() {
                                             <li><NavLink to="/services/custom-clearance/" onClick={handleServicesSubMenu}>Таможенное оформление</NavLink></li>
                                             <li><NavLink to="/services/ved/" onClick={handleServicesSubMenu}>ВЭД</NavLink></li>
                                             <li><NavLink to="/services/solutions/" onClick={handleServicesSubMenu}>Классификационные решения</NavLink></li>
-                                            <li><NavLink to="/services/finuslugi/" onClick={handleServicesSubMenu}>Финансовые услуги</NavLink></li>
+                                            <li><NavLink to="/services/financial-services/" onClick={handleServicesSubMenu}>Финансовые услуги</NavLink></li>
                                             <li><NavLink to="/services/parallel-import/" onClick={handleServicesSubMenu}>Параллельный импорт</NavLink></li>
                                         </ul>
                                     </li>

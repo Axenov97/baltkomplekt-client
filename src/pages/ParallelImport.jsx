@@ -12,12 +12,18 @@ import SEOTransportSection from "../components/sections/SEOTransportSection";
 import Chain from "../components/sections/Chain";
 import SEOParallelSection from "../components/sections/SEOParallelSection";
 
-function ParallelImport({location}) {
+function ParallelImport({isScrollable, setIsScrollable, location}) {
 
     useEffect(() => {
-        const body = document.querySelector('#root');
-        body.scrollIntoView({behavior: 'smooth'}, 500)
-    }, []);
+        if (isScrollable) {
+            setTimeout(() => {
+                const chain = document.querySelector('.chain');
+                chain.scrollIntoView({behavior: 'smooth', block: 'start'}, 0)
+                setIsScrollable(false)
+            }, 200)
+
+        }
+    }, [isScrollable]);
 
     return <>
         <Helmet >
@@ -28,7 +34,7 @@ function ParallelImport({location}) {
         </Helmet>
 
         <FirstSection />
-        <SEOParallelSection />
+        <SEOParallelSection setIsScrollable={setIsScrollable}/>
         <Chain />
         <AboutUsSection />
 

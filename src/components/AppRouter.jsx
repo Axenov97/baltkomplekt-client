@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState, Suspense, useRef} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Routes, Route, useLocation, Navigate} from "react-router-dom";
 import {Layout} from "./Layout";
 import {Home} from "../pages/Home";
@@ -25,7 +25,6 @@ import NewsAdmin from "../pages/Administration/NewsAdmin/NewsAdmin";
 import MaterialsAdmin from "../pages/Administration/MaterialsAdmin/MaterialsAdmin";
 import HomeAdmin from "../pages/Administration/HomeAdmin";
 import CasesAdmin from "../pages/Administration/CasesAdmin/CasesAdmin";
-import Audit from "../pages/Audit";
 import Shipping from "../pages/Shipping";
 import {ShippingStartSection} from "./sections/ShippingStartSection";
 import AirShipping from "./shippingComponents/AirShipping";
@@ -39,13 +38,14 @@ import {Services} from "../pages/Services";
 import {ServicesSection} from "./sections/ServicesSection";
 import ServicesList from "./sections/ServicesList";
 import {ParallelImport} from "../pages/ParallelImport";
+import PageInterShipping from "../pages/InternationalShipping/PageInterShipping";
+import {Financial} from "../pages/Financial";
 
 const AppRouter = () => {
     const {user} = useContext(Context)
     const location = useLocation();
 
-    const priceRef = useRef(null)
-    const [isPrice, setIsPrice] = useState(false)
+    const [isScrollable, setIsScrollable] = useState(false)
 
     useEffect(() => {
         window.ym(86927848, 'hit', location.pathname)
@@ -66,18 +66,23 @@ const AppRouter = () => {
                 }
 
                 <Route path='/' element={<Layout location={location} />} >
-                    <Route index element={<Home setIsPrice={setIsPrice} location={location} />} />
-                    <Route path='/about/' element={<About location={location} />} />
+                    <Route index element={<Home setIsScrollable={setIsScrollable} location={location} />} />
+                    <Route path='/about/' element={<About  />} />
 
                     <Route path='services/' element={<Services location={location} />}>
                         <Route index element={<ServicesList location={location}/>} />
-                        <Route path='custom-clearance/' element={<CustomClearance isPrice={isPrice} priceRef={priceRef} location={location} />} />
+                        <Route path='custom-clearance/' element={
+                            <CustomClearance isScrollable={isScrollable} setIsScrollable={setIsScrollable} location={location} />
+                        } />
                         <Route path='ved/' element={<VED location={location} />} />
                         <Route path='solutions/' element={<Solutions location={location} />} />
-                        <Route path='audit/' element={<Audit/>} />
+                        <Route path='parallel-import/' element={
+                            <ParallelImport isScrollable={isScrollable} setIsScrollable={setIsScrollable} location={location} />
+                        } />
+                        <Route path='financial-services/' element={<Financial location={location} />} />
                         <Route path='transport-services/' element={<TransportServices location={location} />} />
-                        <Route path='parallel-import/' element={<ParallelImport location={location} />} />
-
+                            {/*<Route path='aaa' element={<PageInterShipping />} />*/}
+                        {/*</Route>*/}
                     </Route>
                     <Route path='blog/' element={<Blog location={location}/>} >
                         <Route index element={<BlogSection location={location}/>} />
@@ -88,9 +93,6 @@ const AppRouter = () => {
                     </Route>
 
                 </Route>
-
-
-
 
                 <Route path='contacts' element={<Contacts />} />
 

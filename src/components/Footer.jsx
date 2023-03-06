@@ -37,11 +37,11 @@ function Footer() {
             <div className="footer__content_top flex-container">
                 <h2 className="blue__head">Контакты</h2>
                 <div className="footer_download">
-                    <a href={price} className="text a_btn btn__black_border" target="_blank">
+                    <a href={price} className="text a_btn btn__black_border" target="_blank" rel="noreferrer">
                         <img src={iconPrice}  alt='download'/>
                         <p>Скачать прайс</p>
                     </a>
-                    <a href={dogovor} className="text a_btn" target="_blank">
+                    <a href={dogovor} className="text a_btn" target="_blank" rel="noreferrer">
                         <img src={iconDogovor} alt='download'/>
                         <p>Скачать брокерский договор</p>
                     </a>
@@ -57,7 +57,7 @@ function Footer() {
                     </p>
                     <p>
                         <span>Адрес:</span><br />
-                        <p style={{padding: 0, margin: 0}}>198035, Санкт-Петербург, Двинская ул., д. 10, кор. 3</p>
+                        198035, Санкт-Петербург, Двинская ул., д. 10, кор. 3
                     </p>
                     <p>
                         <span>Email:</span><br />

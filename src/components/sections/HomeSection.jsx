@@ -4,7 +4,7 @@ import {sendYandexMetrik} from "../../utils/metriks";
 import {Link, NavLink, useNavigate} from "react-router-dom";
 
 
-function HomeSection({setIsPrice}){
+function HomeSection({setIsScrollable}){
     const {openModal} = useContext(ModalContext)
     const navigator = useNavigate()
 
@@ -90,7 +90,7 @@ function HomeSection({setIsPrice}){
                                         <button
                                             className='btn btn__white_border'
                                             onClick={()=>{
-                                                setIsPrice(true)
+                                                setIsScrollable(true)
                                                 navigator('services/custom-clearance/')
                                             }}
                                         >
@@ -107,7 +107,15 @@ function HomeSection({setIsPrice}){
                                         <a>Доставка товаров из США и Китая</a>
                                         <a>4 уникальные схемы перевозок</a>
                                         <a>для наших клиентов</a>
-                                        <button className='btn btn__white_border'>Смотреть схемы поставок</button>
+                                        <button
+                                            className='btn btn__white_border'
+                                            onClick={()=>{
+                                                setIsScrollable(true)
+                                                navigator('services/parallel-import/')
+                                            }}
+                                        >
+                                            Смотреть схемы поставок
+                                        </button>
                                     </div>
                                 </div>
                             </div>

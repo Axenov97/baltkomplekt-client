@@ -3,21 +3,18 @@ import {useContext, useEffect, useState} from 'react'
 import price from '../../upload/baltkomplekt-price.xlsx'
 import {sendYandexMetrik} from "../../utils/metriks";
 
-function PriceSection({isPrice, priceRef}){
+function PriceSection(){
     const {openModal} = useContext(ModalContext)
     const [tbodyToggle, setTbodyToggle] = useState(false)
+
     function handlePrice() {
         setTbodyToggle(!tbodyToggle)
         const price = document.querySelector('.price');
         price.scrollIntoView({behavior: 'smooth', block:'start'}, 500)
     }
-    useEffect(()=>{
-        if (isPrice) {
-            priceRef.current.scrollIntoView({behavior: 'smooth'}, 500)
-        }
-    },[isPrice])
+
     return (
-        <section className="price" ref={priceRef}>
+        <section className="price" >
             <div className="container">
                 <h2 style={{textAlign:'center'}}>Цены</h2>
                 <div className="table">

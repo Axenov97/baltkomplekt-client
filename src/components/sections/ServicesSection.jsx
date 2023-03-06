@@ -65,7 +65,7 @@ function ServicesSection(){
                             </ul>
                         </div>
                     </NavLink>
-                    <NavLink to="/services/custom-clearance/">
+                    <NavLink to="/services/financial-services/">
                         <div className="bottom-block">
                             <h2>Финансовые услуги</h2>
                             <ul>

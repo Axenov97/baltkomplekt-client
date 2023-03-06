@@ -1,24 +1,25 @@
 import {FirstSection} from "../components/sections/FirstSection";
 import {AboutUsSection} from "../components/sections/AboutUsSection";
 import {ServicesSection} from "../components/sections/ServicesSection";
-import {StuffSection} from "../components/sections/StuffSection";
 import {PriceSection} from "../components/sections/PriceSection";
 import {BlogSection} from "../components/blogComponents/BlogSection";
-import React, {useEffect, useRef} from "react";
+import React, {useEffect} from "react";
 import {AdvantagesSection} from "../components/sections/AdvantagesSection";
-import {BlogLinkGroup} from "../components/blogComponents/BlogLinkGroup";
-import {HockeySection} from "../components/sections/HockeySection";
 import {Helmet} from "react-helmet";
 import {ClientsSection} from "../components/sections/ClientsSection";
 
-function CustomClearance({isPrice, priceRef, location}) {
+function CustomClearance({isScrollable, setIsScrollable, location}) {
 
     useEffect(() => {
-        if (!isPrice) {
-            const body = document.querySelector('#root');
-            body.scrollIntoView({behavior: 'smooth'}, 500)
+        if (isScrollable) {
+            setTimeout(() => {
+                const price = document.querySelector('.price');
+                price.scrollIntoView({behavior: 'smooth', block: 'start'}, 0)
+                setIsScrollable(false)
+            }, 200)
+
         }
-     }, [isPrice]);
+     }, [isScrollable]);
 
     return <>
         <Helmet >
@@ -33,7 +34,7 @@ function CustomClearance({isPrice, priceRef, location}) {
         <AboutUsSection />
         <AdvantagesSection />
         <ClientsSection />
-        <PriceSection priceRef={priceRef} isPrice={isPrice}/>
+        <PriceSection />
         <BlogSection location={location}/>
         {/*<HockeySection />*/}
     </>
